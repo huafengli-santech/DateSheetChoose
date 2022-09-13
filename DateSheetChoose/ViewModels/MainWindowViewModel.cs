@@ -1,4 +1,6 @@
 ﻿using DateSheetChoose.Base;
+using DateSheetChoose.Common;
+using DateSheetChoose.Date;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,15 @@ namespace DateSheetChoose.ViewModels
 {
     public class MainWindowViewModel
     {
+        //初始化
+        string m_Path = $@"{Environment.CurrentDirectory}\{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}EModules.txt";
+        ModuleFile moduleFile;
+        DynamicModules dynamicModules;
+        public MainWindowViewModel()
+        {
+            moduleFile=new ModuleFile();
+            dynamicModules=new DynamicModules();
+        }
         private CommandBase _closeComamnd;
         public CommandBase CloseCommand
         {
@@ -67,9 +78,26 @@ namespace DateSheetChoose.ViewModels
                 return _maxComamnd;
             }
         }
-        public MainWindowViewModel()
-        {
 
+        private CommandBase _createModuleCommand;
+
+        public CommandBase CreateModuleCommand
+        {
+            get
+            {
+                if (_createModuleCommand == null)
+                {
+                    _createModuleCommand = new CommandBase(
+                        p => true,
+                        p =>
+                        {
+                            dynamicModules.CreateModules(m_Path,moduleFile.StandardModuleProgram);
+                        }
+                        );
+                }
+                return _createModuleCommand;
+            }
         }
+
     }
 }

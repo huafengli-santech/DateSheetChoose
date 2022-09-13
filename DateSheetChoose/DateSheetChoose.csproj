@@ -76,6 +76,7 @@
     <Compile Include="Base\CommandBase.cs" />
     <Compile Include="Base\NotifyBase.cs" />
     <Compile Include="Common\DynamicModules.cs" />
+    <Compile Include="Date\ModuleFile.cs" />
     <Compile Include="Date\ModuleInfo.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">

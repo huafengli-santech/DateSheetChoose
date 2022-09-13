@@ -8,13 +8,21 @@
         Title="DB选型器" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        Background="Transparent"
+        Background="{x:Null}"
         AllowsTransparency="True"
+        ResizeMode="NoResize"
         Topmost="True"
         x:Name="window"
         Height="450" 
         Width="800">
-    <Border Background="White" CornerRadius="10" MouseDown="Border_MouseDown">
+    <Border Background="White" CornerRadius="10" Margin="5" MouseDown="Border_MouseDown">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="5"
+                              Color="#e6e6e6"
+                              Opacity="1"
+                              Direction="0" 
+                              ShadowDepth="0"/>
+        </Border.Effect>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.3*"/>
@@ -43,6 +51,19 @@
                             CommandParameter="{Binding ElementName=window}"
                             Style="{StaticResource FormButtonStyle}"
                             Content="+"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="0.2*"/>
+                </Grid.RowDefinitions>
+                
+                <!--功能按钮-->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+                    <Button Command="{Binding CreateModuleCommand}"
+                        Style="{StaticResource MenuButtonStyle}">生成模板</Button>
+                    <Button Style="{StaticResource MenuButtonStyle}">导出</Button>
                 </StackPanel>
             </Grid>
         </Grid>

@@ -46,5 +46,54 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="MenuButtonStyle"
+               TargetType="Button">
+            <Setter Property="Background"
+                    Value="#569cd6" />
+            <Setter Property="Foreground"
+                    Value="White" />
+            <Setter Property="BorderBrush"
+                    Value="Gray" />
+            <Setter Property="BorderThickness"
+                    Value="1" />
+            <Setter Property="Width"
+                    Value="100" />
+            <Setter Property="Height"
+                    Value="20" />
+            <Setter Property="FontSize"
+                    Value="15" />
+            <Setter Property="Margin"
+                    Value="2 0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Width="{TemplateBinding Width}"
+                                Height="{TemplateBinding Height}"
+                                CornerRadius="5 5 0 0">
+                            <Border.Effect>
+                                <DropShadowEffect Color="#569cd6"
+                                                  Opacity="0.3"
+                                                  BlurRadius="5"
+                                                  ShadowDepth="0"
+                                                  Direction="0"/>
+                            </Border.Effect>
+                            <ContentPresenter  VerticalAlignment="Center"
+                                               HorizontalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver"
+                         Value="True">
+                    <Setter Property="Background"
+                            Value="#91cafa" />
+                    <Setter Property="Foreground"
+                            Value="#355e89" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Application.Resources>
 </Application>
