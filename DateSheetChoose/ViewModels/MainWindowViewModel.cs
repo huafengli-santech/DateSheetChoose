@@ -11,7 +11,6 @@ namespace DateSheetChoose.ViewModels
     public class MainWindowViewModel
     {
         private CommandBase _closeComamnd;
-
         public CommandBase CloseCommand
         {
             get
@@ -30,9 +29,7 @@ namespace DateSheetChoose.ViewModels
                 return _closeComamnd;
             }
         }
-
         private CommandBase _minComamnd;
-
         public CommandBase MinCommand
         {
             get
@@ -52,7 +49,6 @@ namespace DateSheetChoose.ViewModels
             }
         }
         private CommandBase _maxComamnd;
-
         public CommandBase MaxCommand
         {
             get
