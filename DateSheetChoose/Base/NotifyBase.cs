@@ -11,9 +11,9 @@ namespace DateSheetChoose.Base
     public class NotifyBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public void DoNotify([CallerMemberName]string proName="")
+        public void DoNotify([CallerMemberName]String proName="")
         {
-            PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(nameof(proName)));
+            PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(proName));
         }
     }
 }

@@ -102,6 +102,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\HarmonyOS_Sans_Black.ttf" />
+    <Resource Include="Fonts\HarmonyOS_Sans_Bold.ttf" />
+    <Resource Include="Fonts\HarmonyOS_Sans_Light.ttf" />
+    <Resource Include="Fonts\HarmonyOS_Sans_Medium.ttf" />
+    <Resource Include="Fonts\HarmonyOS_Sans_Regular.ttf" />
+    <Resource Include="Fonts\HarmonyOS_Sans_Thin.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
