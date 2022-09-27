@@ -1,0 +1,17 @@
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\bin\Debug\net6.0-windows\UpdateModule.deps.json
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\bin\Debug\net6.0-windows\UpdateModule.dll
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\bin\Debug\net6.0-windows\UpdateModule.pdb
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule.csproj.AssemblyReference.cache
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\Views\ModuleUpdate.g.cs
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule_MarkupCompile.cache
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule_MarkupCompile.lref
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\Views\ModuleUpdate.baml
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule.g.resources
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule.AssemblyInfoInputs.cache
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule.AssemblyInfo.cs
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule.csproj.CoreCompileInputs.cache
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule.dll
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\refint\UpdateModule.dll
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\UpdateModule.pdb
+C:\Users\46432\Desktop\Date Sheet\UpdateModule\obj\Debug\net6.0-windows\ref\UpdateModule.dll

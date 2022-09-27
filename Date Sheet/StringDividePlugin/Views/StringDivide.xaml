@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="StringDividePlugin.Views.StringDivide"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:StringDividePlugin.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid Loaded="Grid_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!--当前已有的模板-->
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0"
+                       Margin="0 5"
+                       Text="当前支持模块"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Center" />
+            <ScrollViewer Grid.Row="1"
+                          Margin="5"
+                          VerticalScrollBarVisibility="Auto">
+                <ListBox ItemsSource="{Binding ModuleLists}"
+                         SelectedItem="{Binding SelectedModuleName}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border CornerRadius="2"
+                                    Margin="0 5"
+                                    BorderThickness="1"
+                                    BorderBrush="#e8e8e8">
+                                <TextBlock Text="{Binding Path=Name}"
+                                           HorizontalAlignment="Center" />
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="0.15*" />
+            </Grid.RowDefinitions>
+            <!--右侧动态加载列表-->
+            <ScrollViewer>
+                <ItemsControl ItemsSource="{Binding PortLists}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid  Margin="10 5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="0.2*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding EName}"
+                                           VerticalAlignment="Center" />
+                                <ComboBox Grid.Column="1"
+                                          ItemsSource="{Binding EParaNames}"
+                                          SelectedIndex="{Binding Index}"
+                                          Margin="10 0" />
+                                <TextBlock Grid.Column="2"
+                                           Text="{Binding CParaNames[Index]}"
+                                           VerticalAlignment="Center" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+            <StackPanel Grid.Row="1"
+                        Orientation="Vertical">
+                <TextBox Text="{Binding ToolTipString}" IsReadOnly="True"  Margin="0 5"/>
+                <TextBox Text="{Binding ResultString}" Margin="0 5" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

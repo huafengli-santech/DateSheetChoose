@@ -1,0 +1,17 @@
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\bin\Release\net6.0-windows\StringDividePlugin.deps.json
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\bin\Release\net6.0-windows\StringDividePlugin.dll
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\bin\Release\net6.0-windows\StringDividePlugin.pdb
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin.csproj.AssemblyReference.cache
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\Views\StringDivide.g.cs
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin_MarkupCompile.cache
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin_MarkupCompile.lref
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\Views\StringDivide.baml
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin.g.resources
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin.AssemblyInfoInputs.cache
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin.AssemblyInfo.cs
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin.csproj.CoreCompileInputs.cache
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin.dll
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\refint\StringDividePlugin.dll
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\StringDividePlugin.pdb
+C:\Users\46432\Desktop\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\ref\StringDividePlugin.dll

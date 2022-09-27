@@ -1,0 +1,60 @@
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.exe
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.deps.json
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.runtimeconfig.json
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.pdb
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\DryIoc.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.DryIoc.Wpf.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.Wpf.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.AssemblyReference.cache
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\MainWindow.baml
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet_MarkupCompile.cache
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.g.resources
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.AssemblyInfoInputs.cache
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.AssemblyInfo.cs
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.CoreCompileInputs.cache
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.CopyComplete
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\refint\Prism DataSheet.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.pdb
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.genruntimeconfig.cache
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\ref\Prism DataSheet.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet_MarkupCompile.lref
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\App.baml
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Common.dll
+C:\Users\Li\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Common.pdb
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.exe
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.deps.json
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.runtimeconfig.json
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.pdb
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\DryIoc.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.DryIoc.Wpf.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.Wpf.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Common.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Common.pdb
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.AssemblyReference.cache
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\MainWindow.baml
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet_MarkupCompile.cache
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet_MarkupCompile.lref
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\App.baml
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.g.resources
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.AssemblyInfoInputs.cache
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.AssemblyInfo.cs
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.CoreCompileInputs.cache
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.CopyComplete
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\refint\Prism DataSheet.dll
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.pdb
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.genruntimeconfig.cache
+C:\Users\46432\Desktop\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\ref\Prism DataSheet.dll
