@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -19,27 +20,15 @@ namespace StringDividePlugin.ViewModels
         public ObservableCollection<ModulesInfo> ModuleLists { get; set; }
         public ObservableCollection<PortInfo> PortLists { get; set; }
         private string _toolTipString;
+        private DelegateCommand _updateCommand;
+        private ModulesInfo _selectedModuleName;
 
         public string ToolTipString
         {
             get { return _toolTipString; }
-            set {SetProperty(ref _toolTipString, GetToolTipString(value)); }
+            set { SetProperty(ref _toolTipString, value); }
         }
 
-        private string GetToolTipString(string tooltip)
-        {
-            string toolTipString = string.Empty;
-            if (tooltip!=null)
-            {
-                //toolTipString = CurrentInfo.CParaNames[CurrentInfo.Index];
-            }
-            return toolTipString;
-        }
-
-
-
-        private DelegateCommand _updateCommand;
-        private ModulesInfo _selectedModuleName;
         private string BuildPath = Environment.CurrentDirectory + "\\ProModules";
 
         public ModulesInfo SelectedModuleName
@@ -48,7 +37,7 @@ namespace StringDividePlugin.ViewModels
             set
             {
                 SetProperty(ref _selectedModuleName, value);
-                if (ModuleLists.Count!=0)
+                if (ModuleLists.Count != 0)
                 {
                     OpenFileCreateForm(value.FilePath);
                 }
@@ -64,14 +53,44 @@ namespace StringDividePlugin.ViewModels
             UpdateForm();
         }
 
+        private void DetectClipFunc()
+        {
+            string clipText = Clipboard.GetText(0);
+            for (int i = 0; i < PortLists.Count; i++)
+            {
+                if (clipText.Contains(PortLists[i].EName))
+                {
+                  MessageBoxResult result=  MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？","粘贴板检测");
+                    if (result==MessageBoxResult.OK)
+                    {
+
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// 实时修改已经选中模块的状态
+        /// </summary>
         private void UpdateForm()
         {
-            Task.Run(()=>
+            Task.Run(() =>
             {
-                Application.Current.Dispatcher.BeginInvoke(() =>
+                while (true)
                 {
+                    Thread.Sleep(500);
+                    Application.Current.Dispatcher.BeginInvoke(() =>
+                    {
+                        string resultString = "型号为：";
+                        for (int i = 0; i < PortLists.Count; i++)
+                        {
+                            resultString += $"{PortLists[i].SelectedEParaName}\t";
+                        }
+                        ToolTipString=resultString;
 
-                });
+                        DetectClipFunc();
+                    });
+                }
             });
         }
 
@@ -95,7 +114,10 @@ namespace StringDividePlugin.ViewModels
             }
 
         }
-
+        /// <summary>
+        /// 选中已经支持的模块时，自动读取对应的文件，并动态添加在左侧的UI中
+        /// </summary>
+        /// <param name="path">选中文件的路径</param>
         private void OpenFileCreateForm(string path)
         {
             PortLists.Clear();
@@ -120,7 +142,7 @@ namespace StringDividePlugin.ViewModels
                             cParaList.Add(portPara[j].Split(" ")[1]);
                         }
 
-                        PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], Index = i, EParaNames = eParaList, CParaNames = cParaList });
+                        PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], EParaNames = eParaList, CParaNames = cParaList, Index = i });
                         i++;
                     }
                 }

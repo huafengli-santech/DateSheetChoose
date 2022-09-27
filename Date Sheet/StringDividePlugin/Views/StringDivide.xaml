@@ -60,25 +60,23 @@
                                     <ColumnDefinition />
                                     <ColumnDefinition Width="0.2*" />
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding EName}"
+                                <TextBlock Text="{Binding CName}"
                                            VerticalAlignment="Center" />
                                 <ComboBox Grid.Column="1"
-                                          ItemsSource="{Binding EParaNames}"
+                                          ItemsSource="{Binding CParaNames}"
                                           SelectedIndex="{Binding Index}"
                                           Margin="10 0" />
                                 <TextBlock Grid.Column="2"
-                                           Text="{Binding CParaNames[Index]}"
+                                           Text="{Binding SelectedEParaName}"
                                            VerticalAlignment="Center" />
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </ScrollViewer>
-            <StackPanel Grid.Row="1"
-                        Orientation="Vertical">
-                <TextBox Text="{Binding ToolTipString}" IsReadOnly="True"  Margin="0 5"/>
-                <TextBox Text="{Binding ResultString}" Margin="0 5" />
-            </StackPanel>
+            <TextBox Grid.Row="1"
+                     Text="{Binding ToolTipString}"
+                     Margin="0 5" />
         </Grid>
     </Grid>
 </UserControl>
