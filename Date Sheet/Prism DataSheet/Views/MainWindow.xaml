@@ -9,7 +9,6 @@
         Background="{x:Null}"
         AllowsTransparency="True"
         ResizeMode="NoResize"
-        Topmost="True"
         x:Name="window"
         Height="450"
         Width="800">

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\46432\\Desktop\\Date Sheet\\UpdateModule\\UpdateModule.csproj": {}
+    "D:\\GitPro\\DateSheetChoose\\Date Sheet\\UpdateModule\\UpdateModule.csproj": {}
   },
   "projects": {
-    "C:\\Users\\46432\\Desktop\\Date Sheet\\UpdateModule\\UpdateModule.csproj": {
+    "D:\\GitPro\\DateSheetChoose\\Date Sheet\\UpdateModule\\UpdateModule.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\46432\\Desktop\\Date Sheet\\UpdateModule\\UpdateModule.csproj",
+        "projectUniqueName": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\UpdateModule\\UpdateModule.csproj",
         "projectName": "UpdateModule",
-        "projectPath": "C:\\Users\\46432\\Desktop\\Date Sheet\\UpdateModule\\UpdateModule.csproj",
+        "projectPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\UpdateModule\\UpdateModule.csproj",
         "packagesPath": "C:\\Users\\46432\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\46432\\Desktop\\Date Sheet\\UpdateModule\\obj\\",
+        "outputPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\UpdateModule\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\VS2019Share\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\46432\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -48,6 +48,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition Height="0.15*" />
+                <RowDefinition Height="0.15*" />
             </Grid.RowDefinitions>
             <!--右侧动态加载列表-->
             <ScrollViewer>
@@ -77,6 +78,15 @@
             <TextBox Grid.Row="1"
                      Text="{Binding ToolTipString}"
                      Margin="0 5" />
+            <TextBox Grid.Row="2"
+                     Margin="0 5">
+                <TextBox.Text>
+                    <MultiBinding StringFormat="初始:{0}&#x0a;结果:{1}">
+                        <Binding Path="ClipSourceString" />
+                        <Binding Path="ClipResultString" />
+                    </MultiBinding>
+                </TextBox.Text>
+            </TextBox>
         </Grid>
     </Grid>
 </UserControl>

@@ -19,9 +19,24 @@ namespace StringDividePlugin.ViewModels
         //模块列表
         public ObservableCollection<ModulesInfo> ModuleLists { get; set; }
         public ObservableCollection<PortInfo> PortLists { get; set; }
+        //用于判断是否
         private string _toolTipString;
         private DelegateCommand _updateCommand;
         private ModulesInfo _selectedModuleName;
+        private string _clipResultString;
+        private string _clipSourceString;
+
+        public string ClipSourceString
+        {
+            get { return _clipSourceString; }
+            set { SetProperty(ref _clipSourceString , value); }
+        }
+
+        public string ClipResultString
+        {
+            get { return _clipResultString; }
+            set { SetProperty(ref _clipResultString, value); }
+        }
 
         public string ToolTipString
         {
@@ -55,18 +70,41 @@ namespace StringDividePlugin.ViewModels
 
         private void DetectClipFunc()
         {
-            string clipText = Clipboard.GetText(0);
-            for (int i = 0; i < PortLists.Count; i++)
+            string clipText = Clipboard.GetText(0).ToLower();
+            string clipSourceText = "";
+            for (int i = 0; i < ModuleLists.Count; i++)
             {
-                if (clipText.Contains(PortLists[i].EName))
+                if (clipText.Contains(ModuleLists[i].Name.ToLower()))
                 {
-                  MessageBoxResult result=  MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？","粘贴板检测");
-                    if (result==MessageBoxResult.OK)
+                    Clipboard.SetText("");
+                    MessageBoxResult result = MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？", "粘贴板检测");
+                    if (result == MessageBoxResult.OK)
                     {
+                        //处理粘贴板内生成的字符串
+                        //1.分解成对应模块字符串长度
+                        OpenFileCreateForm($"{ModuleLists[i].FilePath}");
+                        clipSourceText += ModuleLists[i].Name;
+                        for (int j = 0; j < PortLists.Count; j++)
+                        {
+                            for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
+                            {
 
+                                if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                {
+                                    int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
+                                    clipText = $"{clipText.Substring(0, startindex)} {PortLists[j].CName}:{PortLists[j].CParaNames[m]} {clipText.Substring(startindex+ PortLists[j].EParaNames[m].Length)}";
+                                    //int sourceStartIndex= sourceClipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
+                                    clipSourceText += $" {PortLists[j].CName}:{PortLists[j].EParaNames[m]} ";
+                                }
+
+                            }
+                        }
+                        ClipResultString = clipText;
+                        ClipSourceString = clipSourceText;
                     }
                 }
             }
+
         }
 
         /// <summary>
@@ -86,7 +124,7 @@ namespace StringDividePlugin.ViewModels
                         {
                             resultString += $"{PortLists[i].SelectedEParaName}\t";
                         }
-                        ToolTipString=resultString;
+                        ToolTipString = resultString;
 
                         DetectClipFunc();
                     });
@@ -142,7 +180,7 @@ namespace StringDividePlugin.ViewModels
                             cParaList.Add(portPara[j].Split(" ")[1]);
                         }
 
-                        PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], EParaNames = eParaList, CParaNames = cParaList, Index = i });
+                        PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], EParaNames = eParaList, CParaNames = cParaList, Index = cParaList.Count - 1 });
                         i++;
                     }
                 }

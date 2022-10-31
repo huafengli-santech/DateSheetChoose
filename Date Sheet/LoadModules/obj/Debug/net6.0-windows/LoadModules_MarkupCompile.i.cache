@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\46432\Desktop\Date Sheet\LoadModules\obj\Debug\net6.0-windows\
+D:\GitPro\DateSheetChoose\Date Sheet\LoadModules\obj\Debug\net6.0-windows\
 LoadModules
 none
 false
@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 1972036575071
 Views\LoadModule.xaml;
 
-False
+True
 
