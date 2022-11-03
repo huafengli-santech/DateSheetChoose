@@ -19,19 +19,8 @@
                   SelectedItem="{Binding SelectedModuleName}"
                   Margin="0 0 0 5"
                   IsTextSearchEnabled="True"
-                  IsEditable="True">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <Border CornerRadius="2"
-                            Margin="0 5"
-                            BorderThickness="1"
-                            BorderBrush="#e8e8e8">
-                        <TextBlock Text="{Binding Path=Name}"
-                                   HorizontalAlignment="Center" />
-                    </Border>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+                  DisplayMemberPath="Name"
+                  IsEditable="True" />
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition  Width="auto" />

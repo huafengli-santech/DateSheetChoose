@@ -54,7 +54,10 @@ namespace StringDividePlugin.ViewModels
                 SetProperty(ref _selectedModuleName, value);
                 if (ModuleLists.Count != 0)
                 {
-                    OpenFileCreateForm(value.FilePath);
+                    if (ModuleLists.Contains(value))
+                    {
+                        OpenFileCreateForm(value.FilePath);
+                    }
                 }
             }
         }
