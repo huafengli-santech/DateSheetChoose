@@ -59,7 +59,7 @@ namespace UpdateModule.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/UpdateModule;V1.0.0.0;component/views/moduleupdate.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/UpdateModule;component/views/moduleupdate.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ModuleUpdate.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

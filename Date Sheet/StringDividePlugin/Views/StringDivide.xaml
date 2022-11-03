@@ -10,83 +10,108 @@
              xmlns:prism="http://prismlibrary.com/"
              prism:ViewModelLocator.AutoWireViewModel="True">
     <Grid Loaded="Grid_Loaded">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="auto" />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <!--当前已有的模板-->
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0"
-                       Margin="0 5"
-                       Text="当前支持模块"
-                       VerticalAlignment="Top"
-                       HorizontalAlignment="Center" />
-            <ScrollViewer Grid.Row="1"
-                          Margin="5"
-                          VerticalScrollBarVisibility="Auto">
-                <ListBox ItemsSource="{Binding ModuleLists}"
-                         SelectedItem="{Binding SelectedModuleName}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Border CornerRadius="2"
-                                    Margin="0 5"
-                                    BorderThickness="1"
-                                    BorderBrush="#e8e8e8">
-                                <TextBlock Text="{Binding Path=Name}"
-                                           HorizontalAlignment="Center" />
-                            </Border>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-            </ScrollViewer>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.08*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--搜索框-->
+        <ComboBox ItemsSource="{Binding ModuleLists}"
+                  SelectedItem="{Binding SelectedModuleName}"
+                  Margin="0 0 0 5"
+                  IsTextSearchEnabled="True"
+                  IsEditable="True">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Border CornerRadius="2"
+                            Margin="0 5"
+                            BorderThickness="1"
+                            BorderBrush="#e8e8e8">
+                        <TextBlock Text="{Binding Path=Name}"
+                                   HorizontalAlignment="Center" />
+                    </Border>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--当前已有的模板-->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           Margin="0 5"
+                           Text="当前支持模块"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Center" />
+                <ScrollViewer Grid.Row="1"
+                              Margin="5"
+                              VerticalScrollBarVisibility="Auto">
+                    <ListBox ItemsSource="{Binding ModuleLists}"
+                             SelectedItem="{Binding SelectedModuleName}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border CornerRadius="2"
+                                        Margin="0 5"
+                                        BorderThickness="1"
+                                        BorderBrush="#e8e8e8">
+                                    <TextBlock Text="{Binding Path=Name}"
+                                               HorizontalAlignment="Center" />
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </ScrollViewer>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="0.15*" />
+                    <RowDefinition Height="0.15*" />
+                </Grid.RowDefinitions>
+                <!--右侧动态加载列表-->
+                <ScrollViewer Grid.Row="0">
+                    <ItemsControl ItemsSource="{Binding PortLists}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid  Margin="10 5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*" />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="0.2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding CName}"
+                                               VerticalAlignment="Center" />
+                                    <ComboBox Grid.Column="1"
+                                              ItemsSource="{Binding CParaNames}"
+                                              SelectedIndex="{Binding Index}"
+                                              Margin="10 0" />
+                                    <TextBlock Grid.Column="2"
+                                               Text="{Binding SelectedEParaName}"
+                                               VerticalAlignment="Center" />
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+                <TextBox Grid.Row="1"
+                         Text="{Binding ToolTipString}"
+                         Margin="0 5" />
+                <TextBox Grid.Row="2"
+                         Margin="0 5">
+                    <TextBox.Text>
+                        <MultiBinding StringFormat="初始:{0}&#x0a;结果:{1}">
+                            <Binding Path="ClipSourceString" />
+                            <Binding Path="ClipResultString" />
+                        </MultiBinding>
+                    </TextBox.Text>
+                </TextBox>
+            </Grid>
         </Grid>
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition Height="0.15*" />
-                <RowDefinition Height="0.15*" />
-            </Grid.RowDefinitions>
-            <!--右侧动态加载列表-->
-            <ScrollViewer>
-                <ItemsControl ItemsSource="{Binding PortLists}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid  Margin="10 5">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.2*" />
-                                    <ColumnDefinition />
-                                    <ColumnDefinition Width="0.2*" />
-                                </Grid.ColumnDefinitions>
-                                <TextBlock Text="{Binding CName}"
-                                           VerticalAlignment="Center" />
-                                <ComboBox Grid.Column="1"
-                                          ItemsSource="{Binding CParaNames}"
-                                          SelectedIndex="{Binding Index}"
-                                          Margin="10 0" />
-                                <TextBlock Grid.Column="2"
-                                           Text="{Binding SelectedEParaName}"
-                                           VerticalAlignment="Center" />
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </ScrollViewer>
-            <TextBox Grid.Row="1"
-                     Text="{Binding ToolTipString}"
-                     Margin="0 5" />
-            <TextBox Grid.Row="2"
-                     Margin="0 5">
-                <TextBox.Text>
-                    <MultiBinding StringFormat="初始:{0}&#x0a;结果:{1}">
-                        <Binding Path="ClipSourceString" />
-                        <Binding Path="ClipResultString" />
-                    </MultiBinding>
-                </TextBox.Text>
-            </TextBox>
-        </Grid>
+
     </Grid>
 </UserControl>
