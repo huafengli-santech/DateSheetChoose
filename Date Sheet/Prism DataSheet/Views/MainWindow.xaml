@@ -10,7 +10,7 @@
         AllowsTransparency="True"
         ResizeMode="NoResize"
         x:Name="window"
-        Height="450"
+        Height="600"
         Width="800">
     <Border Background="White"
             CornerRadius="5"
@@ -24,48 +24,54 @@
                               ShadowDepth="0" />
         </Border.Effect>
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.3*" />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <!--关闭、最小、最大化窗体-->
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+
+                <Button ToolTip="最小化"
+                        Command="{Binding MinCommand}"
+                        CommandParameter="{Binding ElementName=window}"
+                        Style="{StaticResource FormButtonStyle}"
+                        FontSize="18"
+                        Content="―" />
+                <Button ToolTip="最大化"
+                        Command="{Binding MaxCommand}"
+                        CommandParameter="{Binding ElementName=window}"
+                        Style="{StaticResource FormButtonStyle}"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        Content="☐" />
+                <Button ToolTip="关闭"
+                        Command="{Binding CloseCommand}"
+                        CommandParameter="{Binding ElementName=window}"
+                        Style="{StaticResource FormButtonStyle}"
+                        FontSize="18"
+                        Content="×" />
+            </StackPanel>
             <!--三个按钮+动态加载后台编写的模块选项-->
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.1*" />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <!--关闭、最小、最大化窗体-->
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center">
-                    <Button ToolTip="关闭"
-                            Command="{Binding CloseCommand}"
-                            CommandParameter="{Binding ElementName=window}"
-                            Style="{StaticResource FormButtonStyle}"
-                            Content="×" />
-                    <Button ToolTip="最小化"
-                            Command="{Binding MinCommand}"
-                            CommandParameter="{Binding ElementName=window}"
-                            Style="{StaticResource FormButtonStyle}"
-                            Content="-" />
-                    <Button ToolTip="最大化"
-                            Command="{Binding MaxCommand}"
-                            CommandParameter="{Binding ElementName=window}"
-                            Style="{StaticResource FormButtonStyle}"
-                            Content="+" />
-                </StackPanel>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
                 <!--已存在插件列表-->
-                <ListView Grid.Row="1"
+                <ListView Grid.Column="0"
+                          Margin="5"
                           ItemsSource="{Binding Modules}"
-                          SelectedItem="{Binding ModuleInfo}"
-                          DisplayMemberPath="DisplayName"></ListView>
-            </Grid>
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition  Height="0.1*" />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-                <ContentControl Grid.Row="1"
-                                Margin="10"
+                          SelectedItem="{Binding ModuleInfo}">
+                    
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding DisplayName}"
+                                       Margin="50 5" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ContentControl Grid.Column="1"
                                 BorderBrush="Transparent"
                                 prism:RegionManager.RegionName="ContentRegion" />
             </Grid>

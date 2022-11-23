@@ -4,6 +4,6 @@ $区块名1+空格+中文翻译：参数1+空格+中文解释+空格|+空格参�
 $区块名2+空格+中文翻译：参数1+空格+中文解释+空格|+空格参数2+空格+中文解释+空格|...|+空格参数N+空格+中文解释
 $比如：Type 类型 ：hp 高性能型 | ba 经济型
 Type 类型 ：hp 高性能型 | ba 经济型
-Axis 轴数 ：02 2轴 | 04 4轴
-Communcation 通讯 ：IP 通讯方式1 | PCI 通讯方式2
-Total-chanel 通道数 ：02 2个 | 04 4个
+Number_of_built_in_drives 内部驱动器数 ：1 1个 | 2 2个 | 3 3个
+Current_rating_of_built_in_drives 内部电流(持续峰值) ：A 5~10A | B 10~20A | C 15~30A
+Sin_Cos_encoder_interface SIN_COS编码器接口 ：1 1个 | 2 2个 | 3 3个 | 4 4个

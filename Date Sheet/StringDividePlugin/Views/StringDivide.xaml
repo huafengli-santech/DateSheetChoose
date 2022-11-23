@@ -5,19 +5,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
-             d:DesignHeight="300"
+             d:DesignHeight="500"
              d:DesignWidth="300"
              xmlns:prism="http://prismlibrary.com/"
-             prism:ViewModelLocator.AutoWireViewModel="True">
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
     <Grid Loaded="Grid_Loaded">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.08*"/>
+            <RowDefinition Height="25" />
             <RowDefinition />
         </Grid.RowDefinitions>
         <!--搜索框-->
         <ComboBox ItemsSource="{Binding ModuleLists}"
                   SelectedItem="{Binding SelectedModuleName}"
-                  Margin="0 0 0 5"
+                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center"
+                  MinWidth="300"
                   IsTextSearchEnabled="True"
                   DisplayMemberPath="Name"
                   IsEditable="True" />
@@ -44,13 +47,10 @@
                              SelectedItem="{Binding SelectedModuleName}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Border CornerRadius="2"
-                                        Margin="0 5"
-                                        BorderThickness="1"
-                                        BorderBrush="#e8e8e8">
-                                    <TextBlock Text="{Binding Path=Name}"
-                                               HorizontalAlignment="Center" />
-                                </Border>
+                                <TextBlock Text="{Binding Path=Name}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Margin="5" />
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
@@ -59,8 +59,7 @@
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition />
-                    <RowDefinition Height="0.15*" />
-                    <RowDefinition Height="0.15*" />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <!--右侧动态加载列表-->
                 <ScrollViewer Grid.Row="0">
@@ -69,11 +68,12 @@
                             <DataTemplate>
                                 <Grid  Margin="10 5">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0.2*" />
+                                        <ColumnDefinition />
                                         <ColumnDefinition />
                                         <ColumnDefinition Width="0.2*" />
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Text="{Binding CName}"
+                                    <TextBlock MinWidth="50"
+                                               Text="{Binding CName}"
                                                VerticalAlignment="Center" />
                                     <ComboBox Grid.Column="1"
                                               ItemsSource="{Binding CParaNames}"
@@ -87,20 +87,41 @@
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
                 </ScrollViewer>
-                <TextBox Grid.Row="1"
-                         Text="{Binding ToolTipString}"
-                         Margin="0 5" />
-                <TextBox Grid.Row="2"
-                         Margin="0 5">
-                    <TextBox.Text>
-                        <MultiBinding StringFormat="初始:{0}&#x0a;结果:{1}">
-                            <Binding Path="ClipSourceString" />
-                            <Binding Path="ClipResultString" />
-                        </MultiBinding>
-                    </TextBox.Text>
-                </TextBox>
+                <TabControl Grid.Row="1"
+                            Margin="0 0 5 5">
+                    <TabItem Cursor="Hand"
+                             Header="选型结果"
+                             Height="38"
+                             Width="70"
+                             Margin="5 0">
+                        <Grid Background="#33ffffff">
+                            <TextBox BorderBrush="Transparent"
+                                     Text="{Binding ToolTipString}" />
+                            <Button Content="拷贝至粘贴板"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Center"
+                                    Margin="5"
+                                    Command="{Binding CopyToClipCmd}" />
+                        </Grid>
+                    </TabItem>
+                    <TabItem Cursor="Hand"
+                             Header="剪贴板检测结果"
+                             Height="38"
+                             Width="70"
+                             Margin="5 0">
+                        <Grid Background="#33ffffff">
+                            <TextBlock Grid.Row="1"
+                                       Margin="5">
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="剪贴板检测值:{0}&#x0a;&#x0a;结果:&#x0a;  {1}">
+                                        <Binding Path="ClipSourceString" />
+                                        <Binding Path="ClipResultString" />
+                                    </MultiBinding>
+                                </TextBlock.Text></TextBlock>
+                        </Grid>
+                    </TabItem>
+                </TabControl>
             </Grid>
         </Grid>
-
     </Grid>
 </UserControl>

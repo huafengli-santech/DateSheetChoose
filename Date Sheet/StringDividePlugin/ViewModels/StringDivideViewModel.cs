@@ -22,6 +22,7 @@ namespace StringDividePlugin.ViewModels
         //用于判断是否
         private string _toolTipString;
         private DelegateCommand _updateCommand;
+        private DelegateCommand _copyToClipCmd;
         private ModulesInfo _selectedModuleName;
         private string _clipResultString;
         private string _clipSourceString;
@@ -29,7 +30,7 @@ namespace StringDividePlugin.ViewModels
         public string ClipSourceString
         {
             get { return _clipSourceString; }
-            set { SetProperty(ref _clipSourceString , value); }
+            set { SetProperty(ref _clipSourceString, value); }
         }
 
         public string ClipResultString
@@ -63,6 +64,7 @@ namespace StringDividePlugin.ViewModels
         }
 
         public DelegateCommand UpdateCommand { get => _updateCommand = new DelegateCommand(ReadModulesFunc); }
+        public DelegateCommand CopyToClipCmd { get => _copyToClipCmd = new DelegateCommand(CopyToClipFunc); }
 
         public StringDivideViewModel()
         {
@@ -71,43 +73,60 @@ namespace StringDividePlugin.ViewModels
             UpdateForm();
         }
 
+        private void CopyToClipFunc()
+        {
+            Clipboard.SetText($"{ToolTipString}");
+        }
+
         private void DetectClipFunc()
         {
-            string clipText = Clipboard.GetText(0).ToLower();
-            string clipSourceText = "";
-            for (int i = 0; i < ModuleLists.Count; i++)
+            try
             {
-                if (clipText.Contains(ModuleLists[i].Name.ToLower()))
+                string clipText = Clipboard.GetText(0).ToLower();
+                string clipSourceText = "";
+                int preindex = 0;
+                for (int i = 0; i < ModuleLists.Count; i++)
                 {
-                    Clipboard.SetText("");
-                    MessageBoxResult result = MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？", "粘贴板检测");
-                    if (result == MessageBoxResult.OK)
+                    if (clipText.Contains(ModuleLists[i].Name.ToLower()))
                     {
-                        //处理粘贴板内生成的字符串
-                        //1.分解成对应模块字符串长度
-                        OpenFileCreateForm($"{ModuleLists[i].FilePath}");
-                        clipSourceText += ModuleLists[i].Name;
-                        for (int j = 0; j < PortLists.Count; j++)
+                        Clipboard.SetText("");
+                        MessageBoxResult result = MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？", "粘贴板检测");
+                        if (result == MessageBoxResult.OK)
                         {
-                            for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
+                            //处理粘贴板内生成的字符串
+                            //1.分解成对应模块字符串长度
+                            OpenFileCreateForm($"{ModuleLists[i].FilePath}");
+                            clipSourceText += ModuleLists[i].Name;
+                            for (int j = 0; j < PortLists.Count; j++)
                             {
-
-                                if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
                                 {
-                                    int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
-                                    clipText = $"{clipText.Substring(0, startindex)} {PortLists[j].CName}:{PortLists[j].CParaNames[m]} {clipText.Substring(startindex+ PortLists[j].EParaNames[m].Length)}";
-                                    //int sourceStartIndex= sourceClipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
-                                    clipSourceText += $" {PortLists[j].CName}:{PortLists[j].EParaNames[m]} ";
-                                }
 
+                                    if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                    {
+                                        int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
+                                        if (startindex!=-1)
+                                        {
+                                            string resultText = $"{PortLists[j].CName} : {PortLists[j].CParaNames[m]}\n";
+                                            clipText = $"{clipText.Substring(0, startindex)} {resultText} {clipText.Substring(startindex + PortLists[j].EParaNames[m].Length)}";
+                                            //int sourceStartIndex= sourceClipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
+                                            clipSourceText += $"{PortLists[j].EParaNames[m]} ";
+                                            preindex = startindex+resultText.Length;
+                                        }
+                                    }
+
+                                }
                             }
+                            ClipResultString = clipText;
+                            ClipSourceString = clipSourceText;
                         }
-                        ClipResultString = clipText;
-                        ClipSourceString = clipSourceText;
                     }
                 }
             }
-
+            catch
+            {
+                MessageBox.Show("粘贴板调用错误,按下Win+V调出面板，\n清空当前所有粘贴板内容后重试");
+            }
         }
 
         /// <summary>
@@ -122,10 +141,10 @@ namespace StringDividePlugin.ViewModels
                     Thread.Sleep(500);
                     Application.Current.Dispatcher.BeginInvoke(() =>
                     {
-                        string resultString = "型号为：";
+                        string resultString = "型号为：\n";
                         for (int i = 0; i < PortLists.Count; i++)
                         {
-                            resultString += $"{PortLists[i].SelectedEParaName}\t";
+                            resultString += $"{PortLists[i].SelectedEParaName} ";
                         }
                         ToolTipString = resultString;
 

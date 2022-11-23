@@ -49,15 +49,12 @@ D:\GitPro\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows
 D:\GitPro\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\refint\StringDividePlugin.dll
 D:\GitPro\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.pdb
 D:\GitPro\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\ref\StringDividePlugin.dll
-D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.csproj.AssemblyReference.cache
-D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin_MarkupCompile.cache
-D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.dll
-D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\refint\StringDividePlugin.dll
-D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.pdb
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\bin\Debug\net6.0-windows\StringDividePlugin.deps.json
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\bin\Debug\net6.0-windows\StringDividePlugin.dll
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\bin\Debug\net6.0-windows\StringDividePlugin.pdb
+D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.csproj.AssemblyReference.cache
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\Views\StringDivide.g.cs
+D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin_MarkupCompile.cache
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin_MarkupCompile.lref
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\Views\StringDivide.baml
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.g.resources
@@ -65,4 +62,7 @@ D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-window
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.AssemblyInfoInputs.cache
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.AssemblyInfo.cs
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.csproj.CoreCompileInputs.cache
+D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.dll
+D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\refint\StringDividePlugin.dll
+D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\StringDividePlugin.pdb
 D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\ref\StringDividePlugin.dll
