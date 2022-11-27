@@ -18,6 +18,7 @@
         <!--搜索框-->
         <ComboBox ItemsSource="{Binding ModuleLists}"
                   SelectedItem="{Binding SelectedModuleName}"
+                  Text="{Binding SearchText}"
                   VerticalAlignment="Center"
                   HorizontalAlignment="Center"
                   MinWidth="300"

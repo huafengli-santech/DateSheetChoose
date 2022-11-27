@@ -26,6 +26,13 @@ namespace StringDividePlugin.ViewModels
         private ModulesInfo _selectedModuleName;
         private string _clipResultString;
         private string _clipSourceString;
+        private string _searchText;
+
+        public string SearchText
+        {
+            get { return _searchText; }
+            set { _searchText = value; RaisePropertyChanged(); UpdateSelectedFunc(_searchText); }
+        }
 
         public string ClipSourceString
         {
@@ -78,6 +85,57 @@ namespace StringDividePlugin.ViewModels
             Clipboard.SetText($"{ToolTipString}");
         }
 
+        private void UpdateSelectedFunc(string _searchText)
+        {
+            _searchText = _searchText.ToLower();
+            List<int> index = new List<int>();
+            for (int i = 0; i < ModuleLists.Count; i++)
+            {
+                int preindex = 0;
+                string bitstring = "";
+                if (_searchText.Contains(ModuleLists[i].Name.ToLower()))
+                {
+                    _searchText = _searchText.Replace(ModuleLists[i].Name.ToLower(), "");
+                    //1.分解成对应模块字符串长度
+                    OpenFileCreateForm($"{ModuleLists[i].FilePath}");
+                    for (int j = 0; j < PortLists.Count; j++)
+                    {
+                        for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
+                        {
+                            int bitValue = PortLists[j].EParaNames[m].Length;
+                            if(!string.IsNullOrEmpty(_searchText)&(_searchText.Length>=bitValue))
+                            {
+                                bitstring = _searchText.ToLower().Substring(0, bitValue);
+                            }
+                            if (bitstring.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                if (_searchText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                {
+                                    int startindex = _searchText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
+                                    if (startindex != -1)
+                                    {
+                                        if (m<PortLists[j].EParaNames.Count)
+                                        {
+                                            index.Add(m);
+                                        }
+                                        else
+                                        {
+                                            index.Add(PortLists[j].EParaNames.Count-1);
+                                        }
+                                        _searchText = _searchText.Remove(startindex, PortLists[j].EParaNames[m].Length);
+                                        //string resultText = $"{PortLists[j].CName} : {PortLists[j].CParaNames[m]}\n";
+                                        //_searchText = $"{_searchText.Substring(0, startindex)} {resultText} {_searchText.Substring(startindex + PortLists[j].EParaNames[m].Length)}";
+                                        //preindex = startindex + resultText.Length;
+                                    }
+                                }
+
+                        }
+                    }
+                    OpenFileCreateForm($"{ModuleLists[i].FilePath}", index);
+                    //ClipResultString = _searchText;
+                }
+            }
+
+        }
         private void DetectClipFunc()
         {
             try
@@ -105,13 +163,13 @@ namespace StringDividePlugin.ViewModels
                                     if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
                                     {
                                         int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
-                                        if (startindex!=-1)
+                                        if (startindex != -1)
                                         {
                                             string resultText = $"{PortLists[j].CName} : {PortLists[j].CParaNames[m]}\n";
                                             clipText = $"{clipText.Substring(0, startindex)} {resultText} {clipText.Substring(startindex + PortLists[j].EParaNames[m].Length)}";
                                             //int sourceStartIndex= sourceClipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
                                             clipSourceText += $"{PortLists[j].EParaNames[m]} ";
-                                            preindex = startindex+resultText.Length;
+                                            preindex = startindex + resultText.Length;
                                         }
                                     }
 
@@ -209,5 +267,42 @@ namespace StringDividePlugin.ViewModels
             }
         }
 
+        private void OpenFileCreateForm(string path, List<int> index)
+        {
+            if (index.Count == 0) { return; }
+            PortLists.Clear();
+            using (StreamReader reader = new StreamReader(path))
+            {
+                int i = 0;
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+                    if (!line.Contains('$'))
+                    {
+                        string[] gettype = line.Split(" ：");
+                        //获取区块名称
+                        string[] portName = gettype[0].Split(" ");
+                        //获取参数列表
+                        string[] portPara = gettype[1].Split(" | ");
+                        List<string> eParaList = new List<string>();
+                        List<string> cParaList = new List<string>();
+                        for (int j = 0; j < portPara.Length; j++)
+                        {
+                            eParaList.Add(portPara[j].Split(" ")[0]);
+                            cParaList.Add(portPara[j].Split(" ")[1]);
+                        }
+
+                            PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], EParaNames = eParaList, CParaNames = cParaList, Index = index[i] });
+
+
+                        if (i < index.Count-1)
+                            i++;
+                        else
+                            i = 0;
+
+                    }
+                }
+            }
+        }
     }
 }
