@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\
+D:\GitPro\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Debug\net6.0-windows\
 StringDividePlugin
 none
 false
@@ -16,5 +16,5 @@ TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 1972036575071
 Views\StringDivide.xaml;
 
-False
+True
 

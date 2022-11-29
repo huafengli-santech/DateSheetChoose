@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -53,13 +54,13 @@ namespace StringDividePlugin.ViewModels
         }
 
         private string BuildPath = Environment.CurrentDirectory + "\\ProModules";
-
         public ModulesInfo SelectedModuleName
         {
             get { return _selectedModuleName; }
             set
             {
                 SetProperty(ref _selectedModuleName, value);
+
                 if (ModuleLists.Count != 0)
                 {
                     if (ModuleLists.Contains(value))
@@ -93,46 +94,55 @@ namespace StringDividePlugin.ViewModels
             {
                 int preindex = 0;
                 string bitstring = "";
-                if (_searchText.Contains(ModuleLists[i].Name.ToLower()))
-                {
-                    _searchText = _searchText.Replace(ModuleLists[i].Name.ToLower(), "");
-                    //1.分解成对应模块字符串长度
-                    OpenFileCreateForm($"{ModuleLists[i].FilePath}");
-                    for (int j = 0; j < PortLists.Count; j++)
+                bool isAlreadyAdd=false;
+                if (String.IsNullOrEmpty(_searchText)) { return; }
+                string splitString = _searchText.Substring(0, ModuleLists[i].Name.Length);//获取最前面的字符数组用于完全匹配
+                if (String.Equals(splitString, ModuleLists[i].Name, StringComparison.OrdinalIgnoreCase))
+                    if (_searchText.Contains(ModuleLists[i].Name.ToLower()))
                     {
-                        for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
+                        _searchText = _searchText.Replace(ModuleLists[i].Name.ToLower(), "");
+                        //1.分解成对应模块字符串长度
+                        OpenFileCreateForm($"{ModuleLists[i].FilePath}");
+                        index.Clear();
+                        for (int j = 0; j < PortLists.Count; j++)
                         {
-                            int bitValue = PortLists[j].EParaNames[m].Length;
-                            if(!string.IsNullOrEmpty(_searchText)&(_searchText.Length>=bitValue))
+                            for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
                             {
-                                bitstring = _searchText.ToLower().Substring(0, bitValue);
-                            }
-                            if (bitstring.Contains(PortLists[j].EParaNames[m].ToLower()))
-                                if (_searchText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                //获取当前变量的长度，根据长度分割字符串
+                                int bitValue = PortLists[j].EParaNames[m].Length;
+                                //如果字符串不为空，并且字符长于待分割的长度，则继续分割
+                                if (!string.IsNullOrEmpty(_searchText) & (_searchText.Length >= bitValue))
                                 {
-                                    int startindex = _searchText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
-                                    if (startindex != -1)
+                                    bitstring = _searchText.ToLower().Substring(0, bitValue);
+                                }
+                                //如果分割出来的包含，证明匹配上了，添加一个新的Index和把该字符串删除已经匹配的字段
+                                //否则给一个默认的index=0
+                                if (bitstring.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                {
+                                    if (_searchText.Contains(PortLists[j].EParaNames[m].ToLower()))
                                     {
-                                        if (m<PortLists[j].EParaNames.Count)
+                                        int startindex = _searchText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
+                                        if (startindex != -1)
                                         {
-                                            index.Add(m);
+                                            if (m < PortLists[j].EParaNames.Count)
+                                            {
+                                                index.Add(m);
+                                                isAlreadyAdd=true;
+                                            }
+                                            _searchText = _searchText.Remove(startindex, PortLists[j].EParaNames[m].Length);
                                         }
-                                        else
-                                        {
-                                            index.Add(PortLists[j].EParaNames.Count-1);
-                                        }
-                                        _searchText = _searchText.Remove(startindex, PortLists[j].EParaNames[m].Length);
-                                        //string resultText = $"{PortLists[j].CName} : {PortLists[j].CParaNames[m]}\n";
-                                        //_searchText = $"{_searchText.Substring(0, startindex)} {resultText} {_searchText.Substring(startindex + PortLists[j].EParaNames[m].Length)}";
-                                        //preindex = startindex + resultText.Length;
                                     }
                                 }
-
+                                else
+                                {
+                                    isAlreadyAdd = false;
+                                }
+                            }
+                            if(!isAlreadyAdd)
+                                index.Add(0);
                         }
+                        OpenFileCreateForm($"{ModuleLists[i].FilePath}", index);
                     }
-                    OpenFileCreateForm($"{ModuleLists[i].FilePath}", index);
-                    //ClipResultString = _searchText;
-                }
             }
 
         }
@@ -143,6 +153,8 @@ namespace StringDividePlugin.ViewModels
                 string clipText = Clipboard.GetText(0).ToLower();
                 string clipSourceText = "";
                 int preindex = 0;
+                string bitstring = "";
+
                 for (int i = 0; i < ModuleLists.Count; i++)
                 {
                     if (clipText.Contains(ModuleLists[i].Name.ToLower()))
@@ -151,7 +163,7 @@ namespace StringDividePlugin.ViewModels
                         MessageBoxResult result = MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？", "粘贴板检测");
                         if (result == MessageBoxResult.OK)
                         {
-                            //处理粘贴板内生成的字符串
+                            clipText = clipText.Replace(ModuleLists[i].Name.ToLower(), "");
                             //1.分解成对应模块字符串长度
                             OpenFileCreateForm($"{ModuleLists[i].FilePath}");
                             clipSourceText += ModuleLists[i].Name;
@@ -159,23 +171,49 @@ namespace StringDividePlugin.ViewModels
                             {
                                 for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
                                 {
-
-                                    if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                    //获取当前变量的长度，根据长度分割字符串
+                                    int bitValue = PortLists[j].EParaNames[m].Length;
+                                    //如果字符串不为空，并且字符长于待分割的长度，则继续分割
+                                    if (!string.IsNullOrEmpty(clipText) & (clipText.Length >= bitValue))
                                     {
-                                        int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
-                                        if (startindex != -1)
+                                        bitstring = clipText.ToLower().Substring(0, bitValue);
+                                    }
+                                    //如果分割出来的包含，证明匹配上了，添加一个新的Index和把该字符串删除已经匹配的字段
+                                    //否则给一个默认的index=0
+                                    if (bitstring.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                    {
+                                        if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
                                         {
-                                            string resultText = $"{PortLists[j].CName} : {PortLists[j].CParaNames[m]}\n";
-                                            clipText = $"{clipText.Substring(0, startindex)} {resultText} {clipText.Substring(startindex + PortLists[j].EParaNames[m].Length)}";
-                                            //int sourceStartIndex= sourceClipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
-                                            clipSourceText += $"{PortLists[j].EParaNames[m]} ";
-                                            preindex = startindex + resultText.Length;
+                                            int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
+                                            if (startindex != -1)
+                                            {
+                                                ClipResultString += $"{PortLists[j].CName} : {PortLists[j].CParaNames[m]}\n";
+                                                clipSourceText += $"{PortLists[j].EParaNames[m]} ";
+                                                clipText = clipText.Remove(startindex, PortLists[j].EParaNames[m].Length);
+
+                                            }
                                         }
                                     }
 
                                 }
+
+                                //for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
+                                //{
+
+                                //    if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                //    {
+                                //        int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
+                                //        if (startindex != -1)
+                                //        {
+                                //ClipResultString += $"{clipText.Substring(0, startindex)} {resultText} {clipText.Substring(startindex + PortLists[j].EParaNames[m].Length)}";
+                                //            //int sourceStartIndex= sourceClipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
+                                //            clipSourceText += $"{PortLists[j].EParaNames[m]} ";
+                                //        }
+                                //    }
+
+                                //}
                             }
-                            ClipResultString = clipText;
+                            //ClipResultString = clipText;
                             ClipSourceString = clipSourceText;
                         }
                     }
@@ -292,10 +330,10 @@ namespace StringDividePlugin.ViewModels
                             cParaList.Add(portPara[j].Split(" ")[1]);
                         }
 
-                            PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], EParaNames = eParaList, CParaNames = cParaList, Index = index[i] });
+                        PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], EParaNames = eParaList, CParaNames = cParaList, Index = index[i] });
 
 
-                        if (i < index.Count-1)
+                        if (i < index.Count - 1)
                             i++;
                         else
                             i = 0;

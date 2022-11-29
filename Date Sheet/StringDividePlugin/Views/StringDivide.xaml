@@ -21,7 +21,9 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="搜索框:" VerticalAlignment="Center"  Margin="10 0"/>
+                <TextBlock Text="搜索框:"
+                           VerticalAlignment="Center"
+                           Margin="10 0" />
                 <!--搜索框-->
                 <ComboBox ItemsSource="{Binding ModuleLists}"
                           SelectedItem="{Binding SelectedModuleName}"
@@ -40,26 +42,14 @@
                            Text="当前支持模块"
                            VerticalAlignment="Top"
                            HorizontalAlignment="Center" />
-                <ScrollViewer Grid.Row="1"
-                              Margin="5"
-                              HorizontalScrollBarVisibility="Auto">
-                    <ListBox ItemsSource="{Binding ModuleLists}"
-                             SelectedItem="{Binding SelectedModuleName}">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Path=Name}"
-                                           HorizontalAlignment="Center"
-                                           VerticalAlignment="Center"
-                                           Margin="5" />
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                        <ListBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel Orientation="Horizontal"/>
-                            </ItemsPanelTemplate>
-                        </ListBox.ItemsPanel>
-                    </ListBox>
-                </ScrollViewer>
+
+                <ComboBox ItemsSource="{Binding ModuleLists}"
+                          Grid.Row="1"
+                          SelectedItem="{Binding SelectedModuleName}"
+                          DisplayMemberPath="Name"
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          MinWidth="300" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
@@ -71,7 +61,7 @@
             <ScrollViewer Grid.Column="1">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" MinHeight="200" />
                         <RowDefinition MinHeight="80" />
                     </Grid.RowDefinitions>
                     <!--右侧动态加载列表-->
@@ -112,7 +102,7 @@
                             <Grid Background="#33ffffff">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
-                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto" />
                                 </Grid.ColumnDefinitions>
                                 <TextBox BorderBrush="Transparent"
                                          Text="{Binding ToolTipString}" />
