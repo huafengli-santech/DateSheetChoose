@@ -48,17 +48,19 @@
         </Style>
         <Style TargetType="Button">
             <Setter Property="Background"
-                    Value="Transparent" />
+                    Value="#22000000" />
             <Setter Property="Foreground"
                     Value="Black" />
             <Setter Property="BorderBrush"
-                    Value="Gray" />
+                    Value="#3f85ff" />
+            <Setter Property="BorderThickness"
+                    Value="0.5" />
             <Setter Property="Padding"
                     Value="5" />
             <Setter Property="BorderThickness"
                     Value="1" />
             <Setter Property="Height"
-                    Value="16" />
+                    Value="24" />
             <Setter Property="Margin"
                     Value="10 0" />
             <Setter Property="Template">
@@ -66,6 +68,9 @@
                     <ControlTemplate TargetType="Button">
                         <Border Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
+                                Padding="{TemplateBinding Padding}"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
                                 Width="{TemplateBinding Width}"
                                 Height="{TemplateBinding Height}"
                                 CornerRadius="4">
@@ -79,7 +84,7 @@
                 <Trigger Property="IsMouseOver"
                          Value="True">
                     <Setter Property="Background"
-                            Value="#22000000" />
+                            Value="#44000000" />
                     <Setter Property="Foreground"
                             Value="#4886ff" />
                 </Trigger>

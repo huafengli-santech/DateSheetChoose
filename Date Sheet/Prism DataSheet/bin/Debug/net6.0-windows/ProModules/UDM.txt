@@ -1,0 +1,10 @@
+Type 类型 ：ba 经济的 | hp 高性能的
+Number_of_built-in_drive 内置驱动器数量(85Vac-265Vac) ：1 1个 | 2 2个 | 3 3个
+Continuous_current 恒向电流(持续/峰值) ：A 5/10A | B 10/20A | C 15/30A
+Number_of_250kHz_SIN-COS_encoder_interface 250kHz_SIN-COS编码器接口的数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+Total_number_of_feedback_channel 反馈通道总数 ：4 4个
+Absolute_encoders_type 绝对式编码器类型 ：N 没有 | U 用户可选 | E EnDat2.2/2.1digital | S Smart_ABS | P Panasonic | B BISS-A/B/C | I SSI
+Number_of_Absolute_encoders_interface 绝对式编码器接口数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+STO 是否支持STO ：Y 支持 | N 不支持
+EtherCAT_Master EtherCAT主站 ：1 支持任何ACS的EtherCAT主站
+Low_Voltage_operation 低电压操作(17-85Vac) ：Y 支持 | N 不支持
