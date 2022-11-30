@@ -5,9 +5,7 @@ using Prism.Regions;
 using Prism_DataSheet.Models;
 using System;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Windows;
-
 namespace Prism_DataSheet.ViewModels
 {
     public class MainWindowViewModel : BindableBase
@@ -18,46 +16,32 @@ namespace Prism_DataSheet.ViewModels
         private ObservableCollection<ModulesInfo> _modules;
         private DelegateCommand _loadModules;
         private ModulesInfo _moduleInfo;
-
-
-
         private DelegateCommand<object> _closeCommand;
         private DelegateCommand<object> _minCommand;
         private DelegateCommand<object> _maxCommand;
-
-
-
-
         private string _title = "ACS型号选择器";
-
-
         public string Title
         {
             get { return _title; }
             set { SetProperty(ref _title, value); }
         }
-
         public ObservableCollection<ModulesInfo> Modules
         {
             get => _modules ?? (_modules = new ObservableCollection<ModulesInfo>());
         }
-
         public DelegateCommand LoadModules { get => _loadModules = new DelegateCommand(InitModules); }
-
         public ModulesInfo ModuleInfo
         {
             get
             {
                 return _moduleInfo;
             }
-
             set
             {
                 _moduleInfo = value;
                 Navigate(value);
             }
         }
-
         public void InitModules()
         {
             var dirModuleCatalog = _moduleCatalog as DirectoryModuleCatalog;
@@ -67,10 +51,10 @@ namespace Prism_DataSheet.ViewModels
                 switch (tempModule.ModuleName)
                 {
                     case "LoadModule":
-                        Modules.Add(new ModulesInfo() { DisplayName = "模块生成", Name = tempModule.ModuleName});
+                        Modules.Add(new ModulesInfo() { DisplayName = "模块生成", Name = tempModule.ModuleName });
                         break;
                     case "StringDivide":
-                        Modules.Add(new ModulesInfo() { DisplayName = "型号分析", Name = tempModule.ModuleName});
+                        Modules.Add(new ModulesInfo() { DisplayName = "型号分析", Name = tempModule.ModuleName });
                         break;
                     case "ModuleUpdate":
                         Modules.Add(new ModulesInfo() { DisplayName = "模块刷新", Name = tempModule.ModuleName });
@@ -78,14 +62,12 @@ namespace Prism_DataSheet.ViewModels
                 }
             }
         }
-
         private void Navigate(ModulesInfo info)
         {
             var paramete = new NavigationParameters();
             paramete.Add($"{info.Name}", DateTime.Now.ToString());
             _regionManager.RequestNavigate("ContentRegion", $"{info.Name}", paramete);
         }
-
         #region Command实现
         public DelegateCommand<object> CloseCommand
         {
@@ -95,7 +77,6 @@ namespace Prism_DataSheet.ViewModels
                 w.Close();
             }));
         }
-
         public DelegateCommand<object> MinCommand
         {
             get => _minCommand ?? (_minCommand = new DelegateCommand<object>((o) =>
@@ -104,7 +85,6 @@ namespace Prism_DataSheet.ViewModels
             w.WindowState = w.WindowState == WindowState.Minimized ? WindowState.Normal : WindowState.Minimized;
         }));
         }
-
         public DelegateCommand<object> MaxCommand
         {
             get => _maxCommand ?? (_maxCommand = new DelegateCommand<object>((o) =>
@@ -114,12 +94,10 @@ namespace Prism_DataSheet.ViewModels
         }));
         }
         #endregion
-
-        public MainWindowViewModel(IRegionManager regionManager,IModuleCatalog moduleCatalog)
+        public MainWindowViewModel(IRegionManager regionManager, IModuleCatalog moduleCatalog)
         {
-            _regionManager =regionManager;
-            _moduleCatalog=moduleCatalog;
+            _regionManager = regionManager;
+            _moduleCatalog = moduleCatalog;
         }
-
     }
 }

@@ -1,0 +1,10 @@
+Number_of_drives 驱动器数 ：1 1个 | 2 2个
+Continuous_current 直流电(持续峰值) ：002 2.5/5A | 005 5/10A | 007 7.5/15A
+250kHz_SIN-COS(LT) 250kHz的SIN-COS接口数量 ：0 0个 | 1 1个 | 2 2个
+Encoder_channels_per_axis 每轴的编码器接口  ：0 0个 | 1 1个 | 2 2个
+Absolute_encoders_type 绝对式编码器类型 ：N 没有 | E EnDat2.1(digital)/2.2 | S Smart_ABS | P Panasonic | B BISS-A/B/C | H Hiperface | R Resolver | I SSI
+Number_of_absolute_encoders_interface 绝对编码器接口数量 ：0 0个 | 1 1个 | 2 2个
+STO 是否支持STO ：Y 支持 | N 不支持
+EtherCAT_Master EtherCAT主站 ：1 支持任何ACS的EtherCAT主站
+I/O_configuration I/O配置 ：N 输入和限位是24V/SOURCE(PNP);输出是24V/SOURCE(PNP) | D 表示和N是一样 | S 输入和限位是24V/SINK(NPN);输出是24V/SOURCE(PNP) | U 输入是24V/SOURCE(PNP),限位是24V/SINK(NPN),输出是24V/SOURCE(PNP)
+

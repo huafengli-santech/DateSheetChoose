@@ -4,14 +4,11 @@ using StringDividePlugin.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Documents;
 
 namespace StringDividePlugin.ViewModels
 {
@@ -28,31 +25,34 @@ namespace StringDividePlugin.ViewModels
         private string _clipResultString;
         private string _clipSourceString;
         private string _searchText;
+        private bool _isAutoDetectClip;
+
+        public bool IsAutoDetectClip
+        {
+            get { return _isAutoDetectClip; }
+            set { _isAutoDetectClip = value; RaisePropertyChanged(); }
+        }
 
         public string SearchText
         {
             get { return _searchText; }
             set { _searchText = value; RaisePropertyChanged(); UpdateSelectedFunc(_searchText); }
         }
-
         public string ClipSourceString
         {
             get { return _clipSourceString; }
             set { SetProperty(ref _clipSourceString, value); }
         }
-
         public string ClipResultString
         {
             get { return _clipResultString; }
             set { SetProperty(ref _clipResultString, value); }
         }
-
         public string ToolTipString
         {
             get { return _toolTipString; }
             set { SetProperty(ref _toolTipString, value); }
         }
-
         private string BuildPath = Environment.CurrentDirectory + "\\ProModules";
         public ModulesInfo SelectedModuleName
         {
@@ -60,7 +60,6 @@ namespace StringDividePlugin.ViewModels
             set
             {
                 SetProperty(ref _selectedModuleName, value);
-
                 if (ModuleLists.Count != 0)
                 {
                     if (ModuleLists.Contains(value))
@@ -70,161 +69,191 @@ namespace StringDividePlugin.ViewModels
                 }
             }
         }
-
         public DelegateCommand UpdateCommand { get => _updateCommand = new DelegateCommand(ReadModulesFunc); }
         public DelegateCommand CopyToClipCmd { get => _copyToClipCmd = new DelegateCommand(CopyToClipFunc); }
-
         public StringDivideViewModel()
         {
             ModuleLists = new ObservableCollection<ModulesInfo>();
             PortLists = new ObservableCollection<PortInfo>();
             UpdateForm();
+            IsAutoDetectClip = true;
         }
-
         private void CopyToClipFunc()
         {
             Clipboard.SetText($"{ToolTipString}");
         }
-
         private void UpdateSelectedFunc(string _searchText)
         {
-            _searchText = _searchText.ToLower();
+            string _tempString = "";
+            int preindex = 0;
+            string bitstring = "";
+            bool isAlreadyAdd = false;
+            bool isCorrectModuleName = false;
+            bool isFirst = false;
+
             List<int> index = new List<int>();
             for (int i = 0; i < ModuleLists.Count; i++)
             {
-                int preindex = 0;
-                string bitstring = "";
-                bool isAlreadyAdd=false;
-                if (String.IsNullOrEmpty(_searchText)) { return; }
-                string splitString = _searchText.Substring(0, ModuleLists[i].Name.Length);//获取最前面的字符数组用于完全匹配
+                _tempString = _searchText.ToLower();
+                isFirst = true;//每次新模块初次检查是否模块匹配
+                isCorrectModuleName = true;
+                if (String.IsNullOrEmpty(_tempString)) { return; }
+                if (_tempString.Length < ModuleLists[i].Name.Length) { return; }
+                string splitString = _tempString.Substring(0, ModuleLists[i].Name.Length);//获取最前面的字符数组用于完全匹配
                 if (String.Equals(splitString, ModuleLists[i].Name, StringComparison.OrdinalIgnoreCase))
-                    if (_searchText.Contains(ModuleLists[i].Name.ToLower()))
+                    if (_tempString.Contains(ModuleLists[i].Name.ToLower()))
                     {
-                        _searchText = _searchText.Replace(ModuleLists[i].Name.ToLower(), "");
+                        _tempString = _tempString.Replace(ModuleLists[i].Name.ToLower(), "");
                         //1.分解成对应模块字符串长度
                         OpenFileCreateForm($"{ModuleLists[i].FilePath}");
                         index.Clear();
                         for (int j = 0; j < PortLists.Count; j++)
                         {
+                            isAlreadyAdd = false;
+                            if (!isCorrectModuleName) { break; }
                             for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
                             {
                                 //获取当前变量的长度，根据长度分割字符串
                                 int bitValue = PortLists[j].EParaNames[m].Length;
                                 //如果字符串不为空，并且字符长于待分割的长度，则继续分割
-                                if (!string.IsNullOrEmpty(_searchText) & (_searchText.Length >= bitValue))
+                                if (!string.IsNullOrEmpty(_tempString) & (_tempString.Length >= bitValue))
                                 {
-                                    bitstring = _searchText.ToLower().Substring(0, bitValue);
+                                    bitstring = _tempString.ToLower().Substring(0, bitValue);
+                                }
+                                //如果没有匹配首个区域上任何一个参数可能是匹配错误了模块重新匹配 
+                                if (isFirst)
+                                {
+                                    isCorrectModuleName = IsCorrectModuleNameFunc(PortLists[j].EParaNames, bitstring);
+                                    if (!isCorrectModuleName) { break; }
+                                    else { isFirst = false; }//如果是正常的模块，下次就不检测，避免后续的出现问题
                                 }
                                 //如果分割出来的包含，证明匹配上了，添加一个新的Index和把该字符串删除已经匹配的字段
                                 //否则给一个默认的index=0
                                 if (bitstring.Contains(PortLists[j].EParaNames[m].ToLower()))
                                 {
-                                    if (_searchText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                    if (_tempString.Contains(PortLists[j].EParaNames[m].ToLower()))
                                     {
-                                        int startindex = _searchText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
+                                        int startindex = _tempString.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
                                         if (startindex != -1)
                                         {
                                             if (m < PortLists[j].EParaNames.Count)
                                             {
                                                 index.Add(m);
-                                                isAlreadyAdd=true;
+                                                isAlreadyAdd = true;
                                             }
-                                            _searchText = _searchText.Remove(startindex, PortLists[j].EParaNames[m].Length);
+                                            _tempString = _tempString.Remove(startindex, PortLists[j].EParaNames[m].Length);
                                         }
                                     }
                                 }
-                                else
-                                {
-                                    isAlreadyAdd = false;
-                                }
                             }
-                            if(!isAlreadyAdd)
+                            if (!isAlreadyAdd)
                                 index.Add(0);
                         }
                         OpenFileCreateForm($"{ModuleLists[i].FilePath}", index);
                     }
             }
-
         }
-        private void DetectClipFunc()
+        /// <summary>
+        /// 根据遍历第一个英文数组与截取的第一段循环遍历看是否为真
+        /// 返回值为true 代表当前模块名称正确
+        ///返回值为false 代表当前模块名称错误 
+        /// </summary>
+        /// <param name="sourceList"></param>
+        /// <param name="bitString"></param>
+        /// <returns></returns>
+        private bool IsCorrectModuleNameFunc(List<string> sourceList, string bitString)
         {
-            try
+            bool result = false;
+            for (int lndex = 0; lndex < sourceList.Count; lndex++)
             {
-                string clipText = Clipboard.GetText(0).ToLower();
-                string clipSourceText = "";
-                int preindex = 0;
-                string bitstring = "";
-
-                for (int i = 0; i < ModuleLists.Count; i++)
+                if (bitString.Equals(sourceList[lndex].ToLower()))
                 {
-                    if (clipText.Contains(ModuleLists[i].Name.ToLower()))
+                    result = true;
+                }
+            }
+            return result;
+        }
+        private void DetectClipFunc(string clipText)
+        {
+            int preindex = 0;
+            string bitstring = "";
+            string _tempString = "";
+            bool isCorrectModuleName = false;
+            bool isFirst = false;
+            bool isFirstShowMessage=true;
+            MessageBoxResult result = new MessageBoxResult();
+
+            for (int i = 0; i < ModuleLists.Count; i++)
+            {
+                _tempString = clipText.ToLower();
+                isFirst = true;//每次新模块初次检查是否模块匹配
+                isCorrectModuleName = true;
+                if (String.IsNullOrEmpty(_tempString)) { return; }
+                if (_tempString.Length < ModuleLists[i].Name.Length) { return; }
+                string splitString = _tempString.Substring(0, ModuleLists[i].Name.Length);//获取最前面的字符数组用于完全匹配
+                if (String.Equals(splitString, ModuleLists[i].Name, StringComparison.OrdinalIgnoreCase))
+                    if (_tempString.Contains(ModuleLists[i].Name.ToLower()))
                     {
-                        Clipboard.SetText("");
-                        MessageBoxResult result = MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？", "粘贴板检测");
-                        if (result == MessageBoxResult.OK)
+                        try
                         {
-                            clipText = clipText.Replace(ModuleLists[i].Name.ToLower(), "");
+                            Clipboard.SetText("");
+                        }
+                        catch
+                        {
+                        }
+                        if(isFirstShowMessage)
+                        {
+                            result = MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？", "粘贴板检测", MessageBoxButton.YesNo);
+                            isFirstShowMessage = false; 
+                        }
+                        if (result == MessageBoxResult.Yes | !isFirstShowMessage)
+                        {
+                            ClipResultString = "";
+                            ClipSourceString = "";
+                            _tempString = _tempString.Replace(ModuleLists[i].Name.ToLower(), "");
                             //1.分解成对应模块字符串长度
                             OpenFileCreateForm($"{ModuleLists[i].FilePath}");
-                            clipSourceText += ModuleLists[i].Name;
                             for (int j = 0; j < PortLists.Count; j++)
                             {
+                                if (!isCorrectModuleName) { break; }
                                 for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
                                 {
                                     //获取当前变量的长度，根据长度分割字符串
                                     int bitValue = PortLists[j].EParaNames[m].Length;
                                     //如果字符串不为空，并且字符长于待分割的长度，则继续分割
-                                    if (!string.IsNullOrEmpty(clipText) & (clipText.Length >= bitValue))
+                                    if (!string.IsNullOrEmpty(_tempString) & (_tempString.Length >= bitValue))
                                     {
-                                        bitstring = clipText.ToLower().Substring(0, bitValue);
+                                        bitstring = _tempString.ToLower().Substring(0, bitValue);
+                                    }
+                                    //如果没有匹配首个区域上任何一个参数可能是匹配错误了模块重新匹配 
+                                    if (isFirst)
+                                    {
+                                        isCorrectModuleName = IsCorrectModuleNameFunc(PortLists[j].EParaNames, bitstring);
+                                        if (!isCorrectModuleName) { break; }
+                                        else { isFirst = false; }//如果是正常的模块，下次就不检测，避免后续的出现问题
                                     }
                                     //如果分割出来的包含，证明匹配上了，添加一个新的Index和把该字符串删除已经匹配的字段
                                     //否则给一个默认的index=0
                                     if (bitstring.Contains(PortLists[j].EParaNames[m].ToLower()))
                                     {
-                                        if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
+                                        if (_tempString.Contains(PortLists[j].EParaNames[m].ToLower()))
                                         {
-                                            int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
+                                            int startindex = _tempString.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
                                             if (startindex != -1)
                                             {
                                                 ClipResultString += $"{PortLists[j].CName} : {PortLists[j].CParaNames[m]}\n";
-                                                clipSourceText += $"{PortLists[j].EParaNames[m]} ";
-                                                clipText = clipText.Remove(startindex, PortLists[j].EParaNames[m].Length);
-
+                                                ClipSourceString += $"{PortLists[j].EParaNames[m]} ";
+                                                _tempString = _tempString.Remove(startindex, PortLists[j].EParaNames[m].Length);
                                             }
                                         }
                                     }
-
                                 }
 
-                                //for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
-                                //{
-
-                                //    if (clipText.Contains(PortLists[j].EParaNames[m].ToLower()))
-                                //    {
-                                //        int startindex = clipText.IndexOf(PortLists[j].EParaNames[m].ToLower(), preindex);
-                                //        if (startindex != -1)
-                                //        {
-                                //ClipResultString += $"{clipText.Substring(0, startindex)} {resultText} {clipText.Substring(startindex + PortLists[j].EParaNames[m].Length)}";
-                                //            //int sourceStartIndex= sourceClipText.IndexOf(PortLists[j].EParaNames[m].ToLower());
-                                //            clipSourceText += $"{PortLists[j].EParaNames[m]} ";
-                                //        }
-                                //    }
-
-                                //}
                             }
-                            //ClipResultString = clipText;
-                            ClipSourceString = clipSourceText;
                         }
                     }
-                }
-            }
-            catch
-            {
-                MessageBox.Show("粘贴板调用错误,按下Win+V调出面板，\n清空当前所有粘贴板内容后重试");
             }
         }
-
         /// <summary>
         /// 实时修改已经选中模块的状态
         /// </summary>
@@ -234,7 +263,7 @@ namespace StringDividePlugin.ViewModels
             {
                 while (true)
                 {
-                    Thread.Sleep(500);
+                    Thread.Sleep(1000);
                     Application.Current.Dispatcher.BeginInvoke(() =>
                     {
                         string resultString = "型号为：\n";
@@ -243,13 +272,12 @@ namespace StringDividePlugin.ViewModels
                             resultString += $"{PortLists[i].SelectedEParaName} ";
                         }
                         ToolTipString = resultString;
-
-                        DetectClipFunc();
+                        if (IsAutoDetectClip)
+                            DetectClipFunc(Clipboard.GetText(0).ToLower());
                     });
                 }
             });
         }
-
         /// <summary>
         /// 加载标准路径下的模板文件
         /// </summary>
@@ -258,8 +286,6 @@ namespace StringDividePlugin.ViewModels
             ModuleLists.Clear();
             DirectoryInfo theFolder = new DirectoryInfo($@"{BuildPath}");
             FileInfo[] dirInfo = theFolder.GetFiles();
-
-
             //遍历文件夹
             foreach (FileInfo NextFile in dirInfo)
             {
@@ -268,7 +294,6 @@ namespace StringDividePlugin.ViewModels
                     ModuleLists.Add(new ModulesInfo() { Name = NextFile.Name.Replace(".txt", null), FilePath = NextFile.FullName });
                 }
             }
-
         }
         /// <summary>
         /// 选中已经支持的模块时，自动读取对应的文件，并动态添加在左侧的UI中
@@ -297,14 +322,12 @@ namespace StringDividePlugin.ViewModels
                             eParaList.Add(portPara[j].Split(" ")[0]);
                             cParaList.Add(portPara[j].Split(" ")[1]);
                         }
-
                         PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], EParaNames = eParaList, CParaNames = cParaList, Index = cParaList.Count - 1 });
                         i++;
                     }
                 }
             }
         }
-
         private void OpenFileCreateForm(string path, List<int> index)
         {
             if (index.Count == 0) { return; }
@@ -329,15 +352,11 @@ namespace StringDividePlugin.ViewModels
                             eParaList.Add(portPara[j].Split(" ")[0]);
                             cParaList.Add(portPara[j].Split(" ")[1]);
                         }
-
                         PortLists.Add(new PortInfo() { EName = portName[0], CName = portName[1], EParaNames = eParaList, CParaNames = cParaList, Index = index[i] });
-
-
                         if (i < index.Count - 1)
                             i++;
                         else
                             i = 0;
-
                     }
                 }
             }

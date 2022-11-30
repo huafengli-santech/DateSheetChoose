@@ -12,8 +12,8 @@ Absolute_encoders_type 绝对式编码器类型 ：U 所有 | N 没有 | E EnDat
 Number_of_Absolute_encoders_interface 绝对式编码器接口数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个
 XL_SCAN XL扫描 ：N 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 10个 | B 11个 | C 12个 | D 13个 | E 14个 | F 15个 | G 16个
 Maximum_number_of_axes 轴的总数 ：4 4轴 | 8 8轴 | A 16轴 | B 32轴
-3rd_party_EtherCAT_servo_drives 第三方EtherCAT伺服驱动器 ：1 1个 | 2 2个 | 3 3个 
-3rd_party_EtherCAT_step_motor_drives 第三方EtherCAT步进电机驱动器 ：1 1个 | 2 2个 | 3 3个
+3rd_party_EtherCAT_servo_drives 第三方EtherCAT伺服驱动器 ：0 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 16轴 | B 32轴
+3rd_party_EtherCAT_step_motor_drives 第三方EtherCAT步进电机驱动器 ：0 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 16轴 | B 32轴
 ECAT_3rd_party_IO_EtherCAT_nodes ECAT第三方IO_EtherCAT节点 ：W 32个 | X 64个
 G-Code,Flexible_configuration,Both G-Code和灵活配置两者都 ：N 没有 | G Gode | F 灵活配置 | T 两者都有
 ServoBoost_number_of_axes_supported ServoBoost支持的轴号数(仅HP版本) ：N 0个 | A 4个 | B 8个 | C 12个 | D 16个 | E 20个 | F 24个 | G 28个 | H 32个

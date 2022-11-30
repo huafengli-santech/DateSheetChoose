@@ -2,7 +2,6 @@
 using Prism.Modularity;
 using Prism.Regions;
 using UpdateModule.Views;
-
 namespace UpdateModule
 {
     [Module(ModuleName = "ModuleUpdate")]
@@ -16,7 +15,6 @@ namespace UpdateModule
             var contentRegion = regionmanager.Regions["ContentRegion"]; //需要绑定到主界面的那个区域
             contentRegion.RequestNavigate(nameof(ModuleUpdate));//注册需要绑定的窗体是哪一个
         }
-
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             //注册类型，发现不写也可以正常运行

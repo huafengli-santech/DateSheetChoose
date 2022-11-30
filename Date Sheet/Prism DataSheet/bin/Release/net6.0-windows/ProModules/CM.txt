@@ -1,0 +1,22 @@
+$请将文件名命名为模块名称[英文]，比如CMhp
+$区块名定义为以下方式【冒号使用中文】
+$区块名1+空格+中文翻译：参数1+空格+中文解释+空格|+空格参数2+空格+中文解释+空格|...|+空格参数N+空格+中文解释
+$区块名2+空格+中文翻译：参数1+空格+中文解释+空格|+空格参数2+空格+中文解释+空格|...|+空格参数N+空格+中文解释
+$比如：Type 类型 ：hp 高性能型 | ba 经济型
+Type 类型 ：hp 高性能型 | ba 经济型
+Number_of_built_in_drives 内部驱动器数 ：1 1个 | 2 2个 | 3 3个
+Current_rating_of_built_in_drives 内部电流(持续峰值) ：A 5~10A | B 10~20A | C 15~30A
+Sin_Cos_encoder_interface SIN_COS编码器接口 ：1 1个 | 2 2个 | 3 3个 | 4 4个
+Tot._no._0f_feedback_channels 反馈通道总数 ：4 4个
+Absolute_encoders_type 绝对式编码器类型 ：U 所有 | N 没有 | E EnDat2.1(digital)/2.2 | S Smart_ABS | P Panasonic | B BISS-A/B/C | I SSI
+Number_of_Absolute_encoders_interface 绝对式编码器接口数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+XL_SCAN XL扫描 ：N 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 10个 | B 11个 | C 12个 | D 13个 | E 14个 | F 15个 | G 16个
+Maximum_number_of_axes 轴的总数 ：4 4轴 | 8 8轴 | A 16轴 | B 32轴
+3rd_party_EtherCAT_servo_drives 第三方EtherCAT伺服驱动器 ：1 1个 | 2 2个 | 3 3个 
+3rd_party_EtherCAT_step_motor_drives 第三方EtherCAT步进电机驱动器 ：1 1个 | 2 2个 | 3 3个
+ECAT_3rd_party_IO_EtherCAT_nodes ECAT第三方IO_EtherCAT节点 ：W 32个 | X 64个
+G-Code,Flexible_configuration,Both G-Code和灵活配置两者都 ：N 没有 | G Gode | F 灵活配置 | T 两者都有
+ServoBoost_number_of_axes_supported ServoBoost支持的轴号数(仅HP版本) ：N 0个 | A 4个 | B 8个 | C 12个 | D 16个 | E 20个 | F 24个 | G 28个 | H 32个
+Input_shaping 支持Input_shaping ：Y 支持 | N 不支持
+Pulse-Dir_for_4_axes_or_LC1_option_installed Pulse-Dir为4轴或LC1选项安装 ：N 没有 | Y P/D | L LC1
+Low_Voltage_operation 低电压操作(17-85Vac或24-120Vdc) ：Y 支持 | N 不支持

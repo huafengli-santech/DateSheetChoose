@@ -1,0 +1,12 @@
+Maximum_number_of_axes 最大轴号数 ：02 2轴 | 04 4轴 | 08 8轴 | 16 16轴 | 32 32轴 | 64 64轴
+ECAT_3rd_party_Servo_Drive ECAT第三方伺服驱动器 ：00 0轴 | 02 2轴 | 04 4轴 | 08 8轴 | 16 16轴 | 32 32轴 | 64 64轴
+ECAT_3rd_party_Step_motor_Drive ECAT第三方步进电机驱动器 ：00 0轴 | 02 2轴 | 04 4轴 | 08 8轴 | 16 16轴 | 32 32轴 | 64 64轴
+ECAT_3rd_party_IO_EtherCAT_node ECAT第三方IO_EtherCAT节点 ：32 32个 | 64 64个
+G-Code 支持G-Code ：N 不支持 | G 支持G-Code
+ServoBoost_number_of_axes_supported ServoBoost支持的轴号数 ：N 0个 | A 4个 | B 8个 | C 12个 | D 16个 | E 20个 | F 24个 | G 28个 | H 32个 | I 36个 | J 40个 | K 44个 | L 48个 | M 52个 | O 56个 | P 60个 | Q 64个
+Input_Shaping,LearningBoost,Both Input_Shaping,LearningBoost,两者都支持 ：N 没有 | L 支持LearningBoost | Y 支持Input_Shaping | B 两者都支持
+Maximum_MPU_cycle_rate 最大MPU循环率(kHz) ：D 默认 | 2 2kHz | 4 4kHz | 5 5kHz
+NetworkBoost-Flexible_configuration 支持NetworkBoost或灵活配置 ：N 不支持 | A 支持NerworkBoost | B 支持灵活配置 | C 两者都支持
+Number_of_ACSPL+_buffer/task ACSPL+的buffer/task的数量 ：D 默认的 | A 16个 | B 32个 | C 64个
+Board_level_version 主板等级 ：Y 支持 | N 不支持
+XL_Scan XL_Scan(每个扫描仪单位) ：N 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 10个 | B 11个 | C 12个 | D 13个 | E 14个 | F 15个 | G 16个

@@ -1,8 +1,6 @@
 using Prism.Regions;
-using System;
 using System.Windows;
 using System.Windows.Controls;
-
 namespace Common.Adpter
 {
     public class TabControlsAdpter : RegionAdapterBase<TabControl>
@@ -10,7 +8,6 @@ namespace Common.Adpter
         public TabControlsAdpter(IRegionBehaviorFactory regionBehaviorFactory) : base(regionBehaviorFactory)
         {
         }
-
         protected override void Adapt(IRegion region, TabControl regionTarget)
         {
             region.Views.CollectionChanged += (sender, e) =>
@@ -28,7 +25,6 @@ namespace Common.Adpter
                 }
             };
         }
-
         private string GetPluginName(string itemName)
         {
             string pluginName = "";
@@ -42,7 +38,6 @@ namespace Common.Adpter
             }
             return pluginName;
         }
-
         protected override IRegion CreateRegion()
         {
             return new Region();

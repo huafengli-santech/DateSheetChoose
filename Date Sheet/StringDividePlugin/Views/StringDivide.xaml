@@ -42,14 +42,18 @@
                            Text="当前支持模块"
                            VerticalAlignment="Top"
                            HorizontalAlignment="Center" />
-
                 <ComboBox ItemsSource="{Binding ModuleLists}"
                           Grid.Row="1"
                           SelectedItem="{Binding SelectedModuleName}"
                           DisplayMemberPath="Name"
                           VerticalAlignment="Center"
                           HorizontalAlignment="Center"
-                          MinWidth="300" />
+                          MinWidth="200" />
+                <CheckBox Content="开启粘贴板检测"
+                          IsChecked="{Binding IsAutoDetectClip}" 
+                          VerticalAlignment="Center"
+                          HorizontalAlignment="Center"
+                          Margin="5 0"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
@@ -57,7 +61,6 @@
                 <ColumnDefinition  Width="auto" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-
             <ScrollViewer Grid.Column="1">
                 <Grid>
                     <Grid.RowDefinitions>
