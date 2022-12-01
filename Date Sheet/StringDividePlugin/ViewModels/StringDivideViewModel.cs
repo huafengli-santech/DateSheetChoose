@@ -4,6 +4,7 @@ using StringDividePlugin.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel.Design;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
@@ -80,7 +81,12 @@ namespace StringDividePlugin.ViewModels
         }
         private void CopyToClipFunc()
         {
-            Clipboard.SetText($"{ToolTipString}");
+            MessageBoxResult message = MessageBox.Show("需要切换至非粘贴板检测模式，确认切换？", "拷贝到粘贴板提示", MessageBoxButton.YesNo);
+            if (message == MessageBoxResult.Yes)
+            {
+                IsAutoDetectClip = false;
+                Clipboard.SetText($"{ToolTipString}");
+            }
         }
         private void UpdateSelectedFunc(string _searchText)
         {
@@ -180,7 +186,7 @@ namespace StringDividePlugin.ViewModels
             string _tempString = "";
             bool isCorrectModuleName = false;
             bool isFirst = false;
-            bool isFirstShowMessage=true;
+            bool isFirstShowMessage = true;
             MessageBoxResult result = new MessageBoxResult();
 
             for (int i = 0; i < ModuleLists.Count; i++)
@@ -201,10 +207,10 @@ namespace StringDividePlugin.ViewModels
                         catch
                         {
                         }
-                        if(isFirstShowMessage)
+                        if (isFirstShowMessage)
                         {
                             result = MessageBox.Show("检测到粘贴板内含有模块关键字，是否进行分析？", "粘贴板检测", MessageBoxButton.YesNo);
-                            isFirstShowMessage = false; 
+                            isFirstShowMessage = false;
                         }
                         if (result == MessageBoxResult.Yes | !isFirstShowMessage)
                         {
@@ -266,7 +272,12 @@ namespace StringDividePlugin.ViewModels
                     Thread.Sleep(1000);
                     Application.Current.Dispatcher.BeginInvoke(() =>
                     {
-                        string resultString = "型号为：\n";
+                        string resultString = $"型号为：\n";
+                        if (!String.IsNullOrEmpty( SelectedModuleName.Name))
+                        {
+                            resultString = $"型号为：\n{SelectedModuleName.Name}";
+                        }
+                        
                         for (int i = 0; i < PortLists.Count; i++)
                         {
                             resultString += $"{PortLists[i].SelectedEParaName} ";
