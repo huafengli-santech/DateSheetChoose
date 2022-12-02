@@ -81,12 +81,20 @@ namespace StringDividePlugin.ViewModels
         }
         private void CopyToClipFunc()
         {
-            MessageBoxResult message = MessageBox.Show("需要切换至非粘贴板检测模式，确认切换？", "拷贝到粘贴板提示", MessageBoxButton.YesNo);
-            if (message == MessageBoxResult.Yes)
+            if(IsAutoDetectClip)
             {
-                IsAutoDetectClip = false;
+                MessageBoxResult message = MessageBox.Show("需要切换至非粘贴板检测模式，确认切换？", "拷贝到粘贴板提示", MessageBoxButton.YesNo);
+                if (message == MessageBoxResult.Yes)
+                {
+                    IsAutoDetectClip = false;
+                    Clipboard.SetText($"{ToolTipString}");
+                }
+            }
+            else
+            {
                 Clipboard.SetText($"{ToolTipString}");
             }
+
         }
         private void UpdateSelectedFunc(string _searchText)
         {
@@ -107,17 +115,17 @@ namespace StringDividePlugin.ViewModels
                 if (_tempString.Length < ModuleLists[i].Name.Length) { return; }
                 string splitString = _tempString.Substring(0, ModuleLists[i].Name.Length);//获取最前面的字符数组用于完全匹配
                 if (String.Equals(splitString, ModuleLists[i].Name, StringComparison.OrdinalIgnoreCase))
-                    if (_tempString.Contains(ModuleLists[i].Name.ToLower()))
+                    if (_tempString.Contains(ModuleLists[i].Name.ToLower()))//如果文本框内包含模块名称进入
                     {
-                        _tempString = _tempString.Replace(ModuleLists[i].Name.ToLower(), "");
+                        _tempString = _tempString.Replace(ModuleLists[i].Name.ToLower(), "");//将模块名称删除
                         //1.分解成对应模块字符串长度
-                        OpenFileCreateForm($"{ModuleLists[i].FilePath}");
-                        index.Clear();
-                        for (int j = 0; j < PortLists.Count; j++)
+                        OpenFileCreateForm($"{ModuleLists[i].FilePath}");//打开对应的模块，并升级UI
+                        index.Clear();//将检索的索引值List删除
+                        for (int j = 0; j < PortLists.Count; j++)//遍历所有的区域模块
                         {
-                            isAlreadyAdd = false;
-                            if (!isCorrectModuleName) { break; }
-                            for (int m = 0; m < PortLists[j].EParaNames.Count; m++)
+                            isAlreadyAdd = false;//判断是不是已经添加过index索引
+                            if (!isCorrectModuleName) { break; }//如果第一判断不是正确的模块，直接返回重新查找新的模块
+                            for (int m = 0; m < PortLists[j].EParaNames.Count; m++)//遍历区域的所有英文字符，来获取每个区域设置的具体值
                             {
                                 //获取当前变量的长度，根据长度分割字符串
                                 int bitValue = PortLists[j].EParaNames[m].Length;
@@ -146,8 +154,9 @@ namespace StringDividePlugin.ViewModels
                                             {
                                                 index.Add(m);
                                                 isAlreadyAdd = true;
+                                                _tempString = _tempString.Remove(startindex, PortLists[j].EParaNames[m].Length);
+                                                break;
                                             }
-                                            _tempString = _tempString.Remove(startindex, PortLists[j].EParaNames[m].Length);
                                         }
                                     }
                                 }
@@ -216,6 +225,7 @@ namespace StringDividePlugin.ViewModels
                         {
                             ClipResultString = "";
                             ClipSourceString = "";
+                            ClipSourceString += ModuleLists[i].Name;
                             _tempString = _tempString.Replace(ModuleLists[i].Name.ToLower(), "");
                             //1.分解成对应模块字符串长度
                             OpenFileCreateForm($"{ModuleLists[i].FilePath}");
@@ -272,10 +282,10 @@ namespace StringDividePlugin.ViewModels
                     Thread.Sleep(1000);
                     Application.Current.Dispatcher.BeginInvoke(() =>
                     {
-                        string resultString = $"型号为：\n";
-                        if (!String.IsNullOrEmpty( SelectedModuleName.Name))
+                        string resultString = $"";
+                        if (SelectedModuleName!=null)
                         {
-                            resultString = $"型号为：\n{SelectedModuleName.Name}";
+                            resultString = $"{SelectedModuleName.Name}";
                         }
                         
                         for (int i = 0; i < PortLists.Count; i++)
@@ -319,6 +329,7 @@ namespace StringDividePlugin.ViewModels
                 while (!reader.EndOfStream)
                 {
                     string line = reader.ReadLine();
+                    if (String.IsNullOrEmpty(line)) { return; }
                     if (!line.Contains('$'))
                     {
                         string[] gettype = line.Split(" ：");
@@ -349,6 +360,7 @@ namespace StringDividePlugin.ViewModels
                 while (!reader.EndOfStream)
                 {
                     string line = reader.ReadLine();
+                    if (String.IsNullOrEmpty(line)) { return; }
                     if (!line.Contains('$'))
                     {
                         string[] gettype = line.Split(" ：");

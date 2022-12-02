@@ -952,24 +952,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\46432\\.nuget\\packages\\": {},
-    "D:\\VS2019Share\\NuGetPackages": {}
+    "C:\\Users\\46432\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitCode\\DateSheetChoose\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
+      "projectUniqueName": "D:\\GitProgram\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
       "projectName": "Prism DataSheet",
-      "projectPath": "D:\\GitCode\\DateSheetChoose\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
+      "projectPath": "D:\\GitProgram\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
       "packagesPath": "C:\\Users\\46432\\.nuget\\packages\\",
-      "outputPath": "D:\\GitCode\\DateSheetChoose\\Date Sheet\\Prism DataSheet\\obj\\",
+      "outputPath": "D:\\GitProgram\\Date Sheet\\Prism DataSheet\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\VS2019Share\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\46432\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -977,15 +972,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\GitCode\\DateSheetChoose\\Date Sheet\\Common\\Common.csproj": {
-              "projectPath": "D:\\GitCode\\DateSheetChoose\\Date Sheet\\Common\\Common.csproj"
+            "D:\\GitProgram\\Date Sheet\\Common\\Common.csproj": {
+              "projectPath": "D:\\GitProgram\\Date Sheet\\Common\\Common.csproj"
             }
           }
         }
@@ -1024,7 +1018,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

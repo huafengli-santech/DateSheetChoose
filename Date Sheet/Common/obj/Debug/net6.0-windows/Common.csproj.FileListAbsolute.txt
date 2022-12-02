@@ -46,3 +46,15 @@ D:\GitCode\DateSheetChoose\Date Sheet\Common\obj\Debug\net6.0-windows\Common.dll
 D:\GitCode\DateSheetChoose\Date Sheet\Common\obj\Debug\net6.0-windows\refint\Common.dll
 D:\GitCode\DateSheetChoose\Date Sheet\Common\obj\Debug\net6.0-windows\Common.pdb
 D:\GitCode\DateSheetChoose\Date Sheet\Common\obj\Debug\net6.0-windows\ref\Common.dll
+D:\GitProgram\Date Sheet\Common\bin\Debug\net6.0-windows\Common.deps.json
+D:\GitProgram\Date Sheet\Common\bin\Debug\net6.0-windows\Common.dll
+D:\GitProgram\Date Sheet\Common\bin\Debug\net6.0-windows\Common.pdb
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\Common.csproj.AssemblyReference.cache
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\Common.AssemblyInfoInputs.cache
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\Common.AssemblyInfo.cs
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\Common.csproj.CoreCompileInputs.cache
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\Common.dll
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\refint\Common.dll
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\Common.pdb
+D:\GitProgram\Date Sheet\Common\obj\Debug\net6.0-windows\ref\Common.dll
