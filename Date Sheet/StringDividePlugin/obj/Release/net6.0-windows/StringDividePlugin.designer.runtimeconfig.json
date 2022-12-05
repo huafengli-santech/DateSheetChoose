@@ -12,8 +12,7 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\46432\\.nuget\\packages",
-      "D:\\VS2019Share\\NuGetPackages"
+      "C:\\Users\\46432\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Reflection.Metadata.MetadataUpdater.IsSupported": false,

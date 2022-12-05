@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\GitCode\DateSheetChoose\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\
+D:\GitProgram\Date Sheet\StringDividePlugin\obj\Release\net6.0-windows\
 StringDividePlugin
 none
 false
@@ -13,8 +13,8 @@ TRACE;RELEASE;NET;NET6_0;NETCOREAPP
 1-1509243389
 
 81625103404
-1972036575071
+1971136134797
 Views\StringDivide.xaml;
 
-True
+False
 
