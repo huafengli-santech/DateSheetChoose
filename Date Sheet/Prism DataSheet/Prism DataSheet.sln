@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadModules", "..\LoadModul
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringDividePlugin", "..\StringDividePlugin\StringDividePlugin.csproj", "{006294DE-17DE-415F-95B0-13F647F33EAB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpdateModule", "..\UpdateModule\UpdateModule.csproj", "{430FE335-1BF0-457E-B851-E2CCE8B34008}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{5023988C-7FB9-4AA2-A6EC-B73064E59833}"
 EndProject
 Global
@@ -37,10 +35,6 @@ Global
 		{006294DE-17DE-415F-95B0-13F647F33EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{006294DE-17DE-415F-95B0-13F647F33EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{006294DE-17DE-415F-95B0-13F647F33EAB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{430FE335-1BF0-457E-B851-E2CCE8B34008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{430FE335-1BF0-457E-B851-E2CCE8B34008}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{430FE335-1BF0-457E-B851-E2CCE8B34008}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{430FE335-1BF0-457E-B851-E2CCE8B34008}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,7 +42,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2205406B-7876-423B-A236-4DEDA792A63A} = {5023988C-7FB9-4AA2-A6EC-B73064E59833}
 		{006294DE-17DE-415F-95B0-13F647F33EAB} = {5023988C-7FB9-4AA2-A6EC-B73064E59833}
-		{430FE335-1BF0-457E-B851-E2CCE8B34008} = {5023988C-7FB9-4AA2-A6EC-B73064E59833}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD5A5D63-ADD7-49EB-9E9D-C792C8494A34}

@@ -11,9 +11,15 @@
     <Page Remove="Styles\**" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Fonts\iconfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fonts\iconfont.ttf" />
   </ItemGroup>
 </Project>

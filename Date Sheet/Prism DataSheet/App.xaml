@@ -4,308 +4,230 @@
                         xmlns:local="clr-namespace:Prism_DataSheet"
                         xmlns:prism="http://prismlibrary.com/">
     <Application.Resources>
-        <Style x:Key="FormButtonStyle"
-               TargetType="Button">
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="Foreground"
-                    Value="#4886ff" />
-            <Setter Property="BorderBrush"
-                    Value="Gray" />
-            <Setter Property="BorderThickness"
-                    Value="1" />
-            <Setter Property="Width"
-                    Value="20" />
-            <Setter Property="Height"
-                    Value="20" />
-            <Setter Property="FontSize"
-                    Value="15" />
-            <Setter Property="Margin"
-                    Value="10 0" />
+        <Style x:Key="FormButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="../Fonts/#iconfont" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="#4886ff" />
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Width" Value="20" />
+            <Setter Property="Height" Value="20" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Margin" Value="10,0" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                Width="{TemplateBinding Width}"
+                        <Border Width="{TemplateBinding Width}"
                                 Height="{TemplateBinding Height}"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
                                 CornerRadius="15">
-                            <ContentPresenter  VerticalAlignment="Center"
-                                               HorizontalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
-                <Trigger Property="IsMouseOver"
-                         Value="True">
-                    <Setter Property="Background"
-                            Value="#44000000" />
-                    <Setter Property="Foreground"
-                            Value="#355e89" />
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#44000000" />
+                    <Setter Property="Foreground" Value="#355e89" />
                 </Trigger>
             </Style.Triggers>
         </Style>
         <Style TargetType="Button">
-            <Setter Property="Background"
-                    Value="#22000000" />
-            <Setter Property="Foreground"
-                    Value="Black" />
-            <Setter Property="BorderBrush"
-                    Value="#3f85ff" />
-            <Setter Property="BorderThickness"
-                    Value="0.5" />
-            <Setter Property="Padding"
-                    Value="5" />
-            <Setter Property="BorderThickness"
-                    Value="1" />
-            <Setter Property="Height"
-                    Value="24" />
-            <Setter Property="Margin"
-                    Value="10 0" />
+            <Setter Property="Background" Value="#22000000" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="#3f85ff" />
+            <Setter Property="BorderThickness" Value="0.5" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Height" Value="24" />
+            <Setter Property="Margin" Value="10,0" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                Padding="{TemplateBinding Padding}"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                                Width="{TemplateBinding Width}"
+                        <Border Width="{TemplateBinding Width}"
                                 Height="{TemplateBinding Height}"
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
                                 CornerRadius="4">
-                            <ContentPresenter  VerticalAlignment="Center"
-                                               HorizontalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
-                <Trigger Property="IsMouseOver"
-                         Value="True">
-                    <Setter Property="Background"
-                            Value="#44000000" />
-                    <Setter Property="Foreground"
-                            Value="#4886ff" />
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#44000000" />
+                    <Setter Property="Foreground" Value="#4886ff" />
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style x:Key="MenuButtonStyle"
-               TargetType="Button">
-            <Setter Property="Background"
-                    Value="#569cd6" />
-            <Setter Property="Foreground"
-                    Value="White" />
-            <Setter Property="BorderBrush"
-                    Value="Gray" />
-            <Setter Property="BorderThickness"
-                    Value="1" />
-            <Setter Property="Width"
-                    Value="100" />
-            <Setter Property="Height"
-                    Value="20" />
-            <Setter Property="FontSize"
-                    Value="15" />
-            <Setter Property="Margin"
-                    Value="2 0" />
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="#399afd" />
+            <Setter Property="BorderBrush" Value="Gray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="20" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Margin" Value="2,0" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                Width="{TemplateBinding Width}"
+                        <Border Width="{TemplateBinding Width}"
                                 Height="{TemplateBinding Height}"
-                                CornerRadius="5 5 0 0">
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                CornerRadius="5">
                             <Border.Effect>
-                                <DropShadowEffect Color="#569cd6"
+                                <DropShadowEffect BlurRadius="5"
+                                                  Direction="0"
                                                   Opacity="0.3"
-                                                  BlurRadius="5"
                                                   ShadowDepth="0"
-                                                  Direction="0" />
+                                                  Color="#569cd6" />
                             </Border.Effect>
-                            <ContentPresenter  VerticalAlignment="Center"
-                                               HorizontalAlignment="Center" />
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
-                <Trigger Property="IsMouseOver"
-                         Value="True">
-                    <Setter Property="Background"
-                            Value="#91cafa" />
-                    <Setter Property="Foreground"
-                            Value="#355e89" />
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#91cafa" />
+                    <Setter Property="Foreground" Value="#355e89" />
                 </Trigger>
             </Style.Triggers>
         </Style>
         <!-- ScrollViewer 滚动条 -->
-        <Style x:Key="ScrollBarThumb"
-               TargetType="{x:Type Thumb}">
-            <Setter Property="OverridesDefaultStyle"
-                    Value="true" />
-            <Setter Property="IsTabStop"
-                    Value="false" />
+        <Style x:Key="ScrollBarThumb" TargetType="{x:Type Thumb}">
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="IsTabStop" Value="false" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Thumb}">
                         <Grid>
-                            <!--滚动条颜色-->
-                            <Border Background="#646465"
-                                    CornerRadius="3" />
+                            <!-- 滚动条颜色 -->
+                            <Border Background="#646465" CornerRadius="3" />
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="HorizontalScrollBarPageButton"
-               TargetType="{x:Type RepeatButton}">
-            <Setter Property="OverridesDefaultStyle"
-                    Value="true" />
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="Focusable"
-                    Value="false" />
-            <Setter Property="IsTabStop"
-                    Value="false" />
-            <Setter Property="Opacity"
-                    Value="0.2" />
+        <Style x:Key="HorizontalScrollBarPageButton" TargetType="{x:Type RepeatButton}">
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Focusable" Value="false" />
+            <Setter Property="IsTabStop" Value="false" />
+            <Setter Property="Opacity" Value="0.2" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type RepeatButton}">
-                        <Rectangle Fill="{TemplateBinding Background}"
-                                   Width="{TemplateBinding Width}"
-                                   Height="{TemplateBinding Height}" />
+                        <Rectangle Width="{TemplateBinding Width}"
+                                   Height="{TemplateBinding Height}"
+                                   Fill="{TemplateBinding Background}" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="VerticalScrollBarPageButton"
-               TargetType="{x:Type RepeatButton}">
-            <Setter Property="OverridesDefaultStyle"
-                    Value="true" />
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="Focusable"
-                    Value="false" />
-            <Setter Property="IsTabStop"
-                    Value="false" />
-            <Setter Property="Opacity"
-                    Value="0.2" />
+        <Style x:Key="VerticalScrollBarPageButton" TargetType="{x:Type RepeatButton}">
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Focusable" Value="false" />
+            <Setter Property="IsTabStop" Value="false" />
+            <Setter Property="Opacity" Value="0.2" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type RepeatButton}">
-                        <Rectangle Fill="{TemplateBinding Background}"
-                                   Width="{TemplateBinding Width}"
-                                   Height="{TemplateBinding Height}" />
+                        <Rectangle Width="{TemplateBinding Width}"
+                                   Height="{TemplateBinding Height}"
+                                   Fill="{TemplateBinding Background}" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-        <!--滚动条上下按钮-->
-        <Style x:Key="VerticalScrollBarPageButton2"
-               TargetType="{x:Type RepeatButton}">
-            <Setter Property="OverridesDefaultStyle"
-                    Value="true" />
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="Focusable"
-                    Value="false" />
-            <Setter Property="IsTabStop"
-                    Value="false" />
-            <Setter Property="Opacity"
-                    Value="0" />
+        <!-- 滚动条上下按钮 -->
+        <Style x:Key="VerticalScrollBarPageButton2" TargetType="{x:Type RepeatButton}">
+            <Setter Property="OverridesDefaultStyle" Value="true" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Focusable" Value="false" />
+            <Setter Property="IsTabStop" Value="false" />
+            <Setter Property="Opacity" Value="0" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type RepeatButton}">
-                        <Rectangle Fill="#90000000"
-                                   Width="0"
-                                   Height="0" />
+                        <Rectangle Width="0"
+                                   Height="0"
+                                   Fill="#90000000" />
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-        <Style x:Key="for_scrollbar"
-               TargetType="{x:Type ScrollBar}">
-            <Setter Property="Stylus.IsPressAndHoldEnabled"
-                    Value="false" />
-            <Setter Property="Stylus.IsFlicksEnabled"
-                    Value="false" />
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="Margin"
-                    Value="0,1,1,6" />
-            <Setter Property="Width"
-                    Value="10" />
-            <Setter Property="MinWidth"
-                    Value="5" />
-            <Setter Property="Opacity"
-                    Value="0.2" />
+        <Style x:Key="for_scrollbar" TargetType="{x:Type ScrollBar}">
+            <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false" />
+            <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Margin" Value="0,1,1,6" />
+            <Setter Property="Width" Value="10" />
+            <Setter Property="MinWidth" Value="5" />
+            <Setter Property="Opacity" Value="0.2" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ScrollBar}">
-                        <Grid x:Name="Bg"
-                              SnapsToDevicePixels="true">
+                        <Grid x:Name="Bg" SnapsToDevicePixels="true">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"></RowDefinition>
-                                <RowDefinition Height="*"></RowDefinition>
-                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto">
+                                </RowDefinition>
+                                <RowDefinition Height="*">
+                                </RowDefinition>
+                                <RowDefinition Height="auto">
+                                </RowDefinition>
                             </Grid.RowDefinitions>
-                            <RepeatButton  Grid.Row="0"
-                                           Style="{StaticResource VerticalScrollBarPageButton2}"
-                                           Command="{x:Static ScrollBar.PageUpCommand}" />
+                            <RepeatButton Grid.Row="0"
+                                          Command="{x:Static ScrollBar.PageUpCommand}"
+                                          Style="{StaticResource VerticalScrollBarPageButton2}" />
                             <Track x:Name="PART_Track"
                                    Grid.Row="1"
-                                   IsEnabled="{TemplateBinding IsMouseOver}"
-                                   IsDirectionReversed="true">
+                                   IsDirectionReversed="true"
+                                   IsEnabled="{TemplateBinding IsMouseOver}">
                                 <Track.DecreaseRepeatButton>
-                                    <RepeatButton Style="{StaticResource VerticalScrollBarPageButton}"
-                                                  Command="{x:Static ScrollBar.PageUpCommand}" />
+                                    <RepeatButton Command="{x:Static ScrollBar.PageUpCommand}" Style="{StaticResource VerticalScrollBarPageButton}" />
                                 </Track.DecreaseRepeatButton>
                                 <Track.IncreaseRepeatButton>
-                                    <RepeatButton Style="{StaticResource VerticalScrollBarPageButton}"
-                                                  Command="{x:Static ScrollBar.PageDownCommand}" />
+                                    <RepeatButton Command="{x:Static ScrollBar.PageDownCommand}" Style="{StaticResource VerticalScrollBarPageButton}" />
                                 </Track.IncreaseRepeatButton>
                                 <Track.Thumb>
                                     <Thumb Style="{StaticResource ScrollBarThumb}" />
                                 </Track.Thumb>
                             </Track>
                             <RepeatButton Grid.Row="2"
-                                          Style="{StaticResource VerticalScrollBarPageButton2}"
-                                          Command="{x:Static ScrollBar.PageDownCommand}" />
+                                          Command="{x:Static ScrollBar.PageDownCommand}"
+                                          Style="{StaticResource VerticalScrollBarPageButton2}" />
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <Style.Triggers>
-                <Trigger Property="Orientation"
-                         Value="Horizontal">
-                    <Setter Property="Background"
-                            Value="Transparent" />
-                    <Setter Property="Margin"
-                            Value="1,0,6,1" />
-                    <Setter Property="Height"
-                            Value="5" />
-                    <Setter Property="MinHeight"
-                            Value="5" />
-                    <Setter Property="Width"
-                            Value="Auto" />
-                    <Setter Property="Opacity"
-                            Value="0.2" />
+                <Trigger Property="Orientation" Value="Horizontal">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Margin" Value="1,0,6,1" />
+                    <Setter Property="Height" Value="5" />
+                    <Setter Property="MinHeight" Value="5" />
+                    <Setter Property="Width" Value="Auto" />
+                    <Setter Property="Opacity" Value="0.2" />
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type ScrollBar}">
-                                <Grid x:Name="Bg"
-                                      SnapsToDevicePixels="true">
-                                    <Track x:Name="PART_Track"
-                                           IsEnabled="{TemplateBinding IsMouseOver}">
+                                <Grid x:Name="Bg" SnapsToDevicePixels="true">
+                                    <Track x:Name="PART_Track" IsEnabled="{TemplateBinding IsMouseOver}">
                                         <Track.DecreaseRepeatButton>
-                                            <RepeatButton Style="{StaticResource HorizontalScrollBarPageButton}"
-                                                          Command="{x:Static ScrollBar.PageLeftCommand}" />
+                                            <RepeatButton Command="{x:Static ScrollBar.PageLeftCommand}" Style="{StaticResource HorizontalScrollBarPageButton}" />
                                         </Track.DecreaseRepeatButton>
                                         <Track.IncreaseRepeatButton>
-                                            <RepeatButton Style="{StaticResource HorizontalScrollBarPageButton}"
-                                                          Command="{x:Static ScrollBar.PageRightCommand}" />
+                                            <RepeatButton Command="{x:Static ScrollBar.PageRightCommand}" Style="{StaticResource HorizontalScrollBarPageButton}" />
                                         </Track.IncreaseRepeatButton>
                                         <Track.Thumb>
                                             <Thumb Style="{StaticResource ScrollBarThumb}" />
@@ -318,12 +240,9 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style x:Key="for_scrollviewer"
-               TargetType="{x:Type ScrollViewer}">
-            <Setter Property="BorderBrush"
-                    Value="LightGray" />
-            <Setter Property="BorderThickness"
-                    Value="0" />
+        <Style x:Key="for_scrollviewer" TargetType="{x:Type ScrollViewer}">
+            <Setter Property="BorderBrush" Value="LightGray" />
+            <Setter Property="BorderThickness" Value="0" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ScrollViewer}">
@@ -331,25 +250,25 @@
                                 BorderThickness="{TemplateBinding BorderThickness}"
                                 SnapsToDevicePixels="True">
                             <Grid Background="{TemplateBinding Background}">
-                                <ScrollContentPresenter  Cursor="{TemplateBinding Cursor}"
-                                                         Margin="{TemplateBinding Padding}"
-                                                         ContentTemplate="{TemplateBinding ContentTemplate}" />
+                                <ScrollContentPresenter Margin="{TemplateBinding Padding}"
+                                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                        Cursor="{TemplateBinding Cursor}" />
                                 <ScrollBar x:Name="PART_VerticalScrollBar"
                                            HorizontalAlignment="Right"
                                            Maximum="{TemplateBinding ScrollableHeight}"
                                            Orientation="Vertical"
                                            Style="{StaticResource for_scrollbar}"
                                            ViewportSize="{TemplateBinding ViewportHeight}"
-                                           Value="{TemplateBinding VerticalOffset}"
-                                           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}" />
+                                           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                                           Value="{TemplateBinding VerticalOffset}" />
                                 <ScrollBar x:Name="PART_HorizontalScrollBar"
+                                           VerticalAlignment="Bottom"
                                            Maximum="{TemplateBinding ScrollableWidth}"
                                            Orientation="Horizontal"
                                            Style="{StaticResource for_scrollbar}"
-                                           VerticalAlignment="Bottom"
-                                           Value="{TemplateBinding HorizontalOffset}"
                                            ViewportSize="{TemplateBinding ViewportWidth}"
-                                           Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}" />
+                                           Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                           Value="{TemplateBinding HorizontalOffset}" />
                             </Grid>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -360,25 +279,24 @@
                                                          Storyboard.TargetProperty="Opacity"
                                                          To="0.8"
                                                          Duration="0:0:1" />
-                                        <DoubleAnimation Storyboard.TargetName="PART_VerticalScrollBar"
+                                        <DoubleAnimation BeginTime="0:0:1"
+                                                         Storyboard.TargetName="PART_VerticalScrollBar"
                                                          Storyboard.TargetProperty="Opacity"
                                                          To="0.2"
-                                                         Duration="0:0:1"
-                                                         BeginTime="0:0:1" />
+                                                         Duration="0:0:1" />
                                         <DoubleAnimation Storyboard.TargetName="PART_HorizontalScrollBar"
                                                          Storyboard.TargetProperty="Opacity"
                                                          To="0.8"
                                                          Duration="0:0:1" />
-                                        <DoubleAnimation Storyboard.TargetName="PART_HorizontalScrollBar"
+                                        <DoubleAnimation BeginTime="0:0:1"
+                                                         Storyboard.TargetName="PART_HorizontalScrollBar"
                                                          Storyboard.TargetProperty="Opacity"
                                                          To="0.2"
-                                                         Duration="0:0:1"
-                                                         BeginTime="0:0:1" />
+                                                         Duration="0:0:1" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-                            <EventTrigger RoutedEvent="MouseEnter"
-                                          SourceName="PART_VerticalScrollBar">
+                            <EventTrigger RoutedEvent="MouseEnter" SourceName="PART_VerticalScrollBar">
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimation Storyboard.TargetName="PART_VerticalScrollBar"
@@ -388,8 +306,7 @@
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-                            <EventTrigger RoutedEvent="MouseLeave"
-                                          SourceName="PART_VerticalScrollBar">
+                            <EventTrigger RoutedEvent="MouseLeave" SourceName="PART_VerticalScrollBar">
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimation Storyboard.TargetName="PART_VerticalScrollBar"
@@ -399,8 +316,7 @@
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-                            <EventTrigger RoutedEvent="MouseEnter"
-                                          SourceName="PART_HorizontalScrollBar">
+                            <EventTrigger RoutedEvent="MouseEnter" SourceName="PART_HorizontalScrollBar">
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimation Storyboard.TargetName="PART_HorizontalScrollBar"
@@ -410,8 +326,7 @@
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
-                            <EventTrigger RoutedEvent="MouseLeave"
-                                          SourceName="PART_HorizontalScrollBar">
+                            <EventTrigger RoutedEvent="MouseLeave" SourceName="PART_HorizontalScrollBar">
                                 <BeginStoryboard>
                                     <Storyboard>
                                         <DoubleAnimation Storyboard.TargetName="PART_HorizontalScrollBar"
@@ -426,155 +341,97 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <!--默认ScrollBar-->
-        <Style TargetType="ScrollBar"
-               BasedOn="{StaticResource for_scrollbar}" />
-        <!--默认ScrollView-->
-        <Style TargetType="ScrollViewer"
-               BasedOn="{StaticResource for_scrollviewer}" />
-        <!--默认tabControl-->
+        <!-- 默认ScrollBar -->
+        <Style BasedOn="{StaticResource for_scrollbar}" TargetType="ScrollBar" />
+        <!-- 默认ScrollView -->
+        <Style BasedOn="{StaticResource for_scrollviewer}" TargetType="ScrollViewer" />
+        <!-- 默认tabControl -->
         <Style TargetType="{x:Type TabControl}">
-            <Setter Property="Padding"
-                    Value="2" />
-            <Setter Property="HorizontalContentAlignment"
-                    Value="Center" />
-            <Setter Property="VerticalContentAlignment"
-                    Value="Center" />
-            <Setter Property="Background"
-                    Value="White" />
-            <Setter Property="BorderBrush"
-                    Value="#FFACACAC" />
-            <Setter Property="BorderThickness"
-                    Value="1" />
-            <Setter Property="Foreground"
-                    Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+            <Setter Property="Padding" Value="2" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="BorderBrush" Value="#FFACACAC" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TabControl}">
                         <Grid x:Name="templateRoot"
                               ClipToBounds="True"
-                              SnapsToDevicePixels="True"
-                              KeyboardNavigation.TabNavigation="Local">
+                              KeyboardNavigation.TabNavigation="Local"
+                              SnapsToDevicePixels="True">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition x:Name="ColumnDefinition0" />
-                                <ColumnDefinition x:Name="ColumnDefinition1"
-                                                  Width="0" />
+                                <ColumnDefinition x:Name="ColumnDefinition1" Width="0" />
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
-                                <RowDefinition x:Name="RowDefinition0"
-                                               Height="Auto" />
-                                <RowDefinition x:Name="RowDefinition1"
-                                               Height="*" />
+                                <RowDefinition x:Name="RowDefinition0" Height="Auto" />
+                                <RowDefinition x:Name="RowDefinition1" Height="*" />
                             </Grid.RowDefinitions>
                             <TabPanel x:Name="HeaderPanel"
-                                      HorizontalAlignment="Center"
-                                      Background="Transparent"
-                                      Grid.Column="0"
-                                      IsItemsHost="True"
-                                      Margin="0"
                                       Grid.Row="0"
-                                      KeyboardNavigation.TabIndex="1"
-                                      Panel.ZIndex="1" />
-                            <Line X1="0"
-                                  X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}"
+                                      Grid.Column="0"
+                                      Margin="0"
+                                      HorizontalAlignment="Center"
+                                      Panel.ZIndex="1"
+                                      Background="Transparent"
+                                      IsItemsHost="True"
+                                      KeyboardNavigation.TabIndex="1" />
+                            <Line Margin="0,0,0,1"
+                                  VerticalAlignment="Bottom"
+                                  SnapsToDevicePixels="True"
                                   Stroke="Gray"
                                   StrokeThickness="0.1"
-                                  VerticalAlignment="Bottom"
-                                  Margin="0 0 0 1"
-                                  SnapsToDevicePixels="True" />
+                                  X1="0"
+                                  X2="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" />
                             <Border x:Name="ContentPanel"
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
-                                    Background="{TemplateBinding Background}"
-                                    Grid.Column="0"
                                     KeyboardNavigation.DirectionalNavigation="Contained"
-                                    Grid.Row="1"
                                     KeyboardNavigation.TabIndex="2"
                                     KeyboardNavigation.TabNavigation="Local">
                                 <ContentPresenter x:Name="PART_SelectedContentHost"
-                                                  ContentTemplate="{TemplateBinding SelectedContentTemplate}"
-                                                  Content="{TemplateBinding SelectedContent}"
-                                                  ContentStringFormat="{TemplateBinding SelectedContentStringFormat}"
-                                                  ContentSource="SelectedContent"
                                                   Margin="0"
+                                                  Content="{TemplateBinding SelectedContent}"
+                                                  ContentSource="SelectedContent"
+                                                  ContentStringFormat="{TemplateBinding SelectedContentStringFormat}"
+                                                  ContentTemplate="{TemplateBinding SelectedContentTemplate}"
                                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                             </Border>
                         </Grid>
                         <ControlTemplate.Triggers>
-                            <Trigger Property="TabStripPlacement"
-                                     Value="Bottom">
-                                <Setter Property="Grid.Row"
-                                        TargetName="HeaderPanel"
-                                        Value="1" />
-                                <Setter Property="Grid.Row"
-                                        TargetName="ContentPanel"
-                                        Value="0" />
-                                <Setter Property="Height"
-                                        TargetName="RowDefinition0"
-                                        Value="*" />
-                                <Setter Property="Height"
-                                        TargetName="RowDefinition1"
-                                        Value="Auto" />
+                            <Trigger Property="TabStripPlacement" Value="Bottom">
+                                <Setter TargetName="HeaderPanel" Property="Grid.Row" Value="1" />
+                                <Setter TargetName="ContentPanel" Property="Grid.Row" Value="0" />
+                                <Setter TargetName="RowDefinition0" Property="Height" Value="*" />
+                                <Setter TargetName="RowDefinition1" Property="Height" Value="Auto" />
                             </Trigger>
-                            <Trigger Property="TabStripPlacement"
-                                     Value="Left">
-                                <Setter Property="Grid.Row"
-                                        TargetName="HeaderPanel"
-                                        Value="0" />
-                                <Setter Property="Grid.Row"
-                                        TargetName="ContentPanel"
-                                        Value="0" />
-                                <Setter Property="Grid.Column"
-                                        TargetName="HeaderPanel"
-                                        Value="0" />
-                                <Setter Property="Grid.Column"
-                                        TargetName="ContentPanel"
-                                        Value="1" />
-                                <Setter Property="Width"
-                                        TargetName="ColumnDefinition0"
-                                        Value="Auto" />
-                                <Setter Property="Width"
-                                        TargetName="ColumnDefinition1"
-                                        Value="*" />
-                                <Setter Property="Height"
-                                        TargetName="RowDefinition0"
-                                        Value="*" />
-                                <Setter Property="Height"
-                                        TargetName="RowDefinition1"
-                                        Value="0" />
+                            <Trigger Property="TabStripPlacement" Value="Left">
+                                <Setter TargetName="HeaderPanel" Property="Grid.Row" Value="0" />
+                                <Setter TargetName="ContentPanel" Property="Grid.Row" Value="0" />
+                                <Setter TargetName="HeaderPanel" Property="Grid.Column" Value="0" />
+                                <Setter TargetName="ContentPanel" Property="Grid.Column" Value="1" />
+                                <Setter TargetName="ColumnDefinition0" Property="Width" Value="Auto" />
+                                <Setter TargetName="ColumnDefinition1" Property="Width" Value="*" />
+                                <Setter TargetName="RowDefinition0" Property="Height" Value="*" />
+                                <Setter TargetName="RowDefinition1" Property="Height" Value="0" />
                             </Trigger>
-                            <Trigger Property="TabStripPlacement"
-                                     Value="Right">
-                                <Setter Property="Grid.Row"
-                                        TargetName="HeaderPanel"
-                                        Value="0" />
-                                <Setter Property="Grid.Row"
-                                        TargetName="ContentPanel"
-                                        Value="0" />
-                                <Setter Property="Grid.Column"
-                                        TargetName="HeaderPanel"
-                                        Value="1" />
-                                <Setter Property="Grid.Column"
-                                        TargetName="ContentPanel"
-                                        Value="0" />
-                                <Setter Property="Width"
-                                        TargetName="ColumnDefinition0"
-                                        Value="*" />
-                                <Setter Property="Width"
-                                        TargetName="ColumnDefinition1"
-                                        Value="Auto" />
-                                <Setter Property="Height"
-                                        TargetName="RowDefinition0"
-                                        Value="*" />
-                                <Setter Property="Height"
-                                        TargetName="RowDefinition1"
-                                        Value="0" />
+                            <Trigger Property="TabStripPlacement" Value="Right">
+                                <Setter TargetName="HeaderPanel" Property="Grid.Row" Value="0" />
+                                <Setter TargetName="ContentPanel" Property="Grid.Row" Value="0" />
+                                <Setter TargetName="HeaderPanel" Property="Grid.Column" Value="1" />
+                                <Setter TargetName="ContentPanel" Property="Grid.Column" Value="0" />
+                                <Setter TargetName="ColumnDefinition0" Property="Width" Value="*" />
+                                <Setter TargetName="ColumnDefinition1" Property="Width" Value="Auto" />
+                                <Setter TargetName="RowDefinition0" Property="Height" Value="*" />
+                                <Setter TargetName="RowDefinition1" Property="Height" Value="0" />
                             </Trigger>
-                            <Trigger Property="IsEnabled"
-                                     Value="False">
-                                <Setter Property="TextElement.Foreground"
-                                        TargetName="templateRoot"
-                                        Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="templateRoot" Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -582,110 +439,77 @@
             </Setter>
         </Style>
         <Style TargetType="{x:Type TabItem}">
-            <Setter Property="Foreground"
-                    Value="Black" />
-            <Setter Property="Background"
-                    Value="Transparent" />
-            <Setter Property="BorderBrush"
-                    Value="#FFACACAC" />
-            <Setter Property="Margin"
-                    Value="0" />
-            <Setter Property="HorizontalContentAlignment"
-                    Value="Stretch" />
-            <Setter Property="VerticalContentAlignment"
-                    Value="Stretch" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="#FFACACAC" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TabItem}">
                         <Grid x:Name="templateRoot"
-                              SnapsToDevicePixels="True"
-                              Background="Transparent">
+                              Background="Transparent"
+                              SnapsToDevicePixels="True">
                             <Border x:Name="_underline"
+                                    Margin="{TemplateBinding Margin}"
                                     BorderBrush="#4886ff"
-                                    BorderThickness="0"
-                                    Margin="{TemplateBinding Margin}" />
+                                    BorderThickness="0" />
                             <Grid>
                                 <TextBlock x:Name="txt"
-                                           Visibility="Visible"
-                                           VerticalAlignment="Center"
                                            HorizontalAlignment="Center"
-                                           Text="{TemplateBinding Header}"
-                                           ToolTip="{TemplateBinding Header}"
+                                           VerticalAlignment="Center"
                                            Foreground="{TemplateBinding Foreground}"
-                                           TextTrimming="CharacterEllipsis" />
+                                           Text="{TemplateBinding Header}"
+                                           TextTrimming="CharacterEllipsis"
+                                           ToolTip="{TemplateBinding Header}"
+                                           Visibility="Visible" />
                             </Grid>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <MultiDataTrigger>
                                 <MultiDataTrigger.Conditions>
-                                    <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}"
-                                               Value="true" />
-                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}"
-                                               Value="Top" />
+                                    <Condition Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}" Value="true" />
+                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Top" />
                                 </MultiDataTrigger.Conditions>
-                                <Setter Property="Foreground"
-                                        TargetName="txt"
-                                        Value="#4886ff" />
+                                <Setter TargetName="txt" Property="Foreground" Value="#4886ff" />
                             </MultiDataTrigger>
                             <MultiDataTrigger>
                                 <MultiDataTrigger.Conditions>
-                                    <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}"
-                                               Value="false" />
-                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}"
-                                               Value="Left" />
+                                    <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
+                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Left" />
                                 </MultiDataTrigger.Conditions>
-                                <Setter Property="Opacity"
-                                        TargetName="templateRoot"
-                                        Value="0.56" />
+                                <Setter TargetName="templateRoot" Property="Opacity" Value="0.56" />
                             </MultiDataTrigger>
                             <MultiDataTrigger>
                                 <MultiDataTrigger.Conditions>
-                                    <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}"
-                                               Value="false" />
-                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}"
-                                               Value="Bottom" />
+                                    <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
+                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Bottom" />
                                 </MultiDataTrigger.Conditions>
-                                <Setter Property="Opacity"
-                                        TargetName="templateRoot"
-                                        Value="0.56" />
+                                <Setter TargetName="templateRoot" Property="Opacity" Value="0.56" />
                             </MultiDataTrigger>
                             <MultiDataTrigger>
                                 <MultiDataTrigger.Conditions>
-                                    <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}"
-                                               Value="false" />
-                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}"
-                                               Value="Right" />
+                                    <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
+                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Right" />
                                 </MultiDataTrigger.Conditions>
-                                <Setter Property="Opacity"
-                                        TargetName="templateRoot"
-                                        Value="0.56" />
+                                <Setter TargetName="templateRoot" Property="Opacity" Value="0.56" />
                             </MultiDataTrigger>
                             <MultiDataTrigger>
                                 <MultiDataTrigger.Conditions>
-                                    <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}"
-                                               Value="false" />
-                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}"
-                                               Value="Top" />
+                                    <Condition Binding="{Binding IsEnabled, RelativeSource={RelativeSource Self}}" Value="false" />
+                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Top" />
                                 </MultiDataTrigger.Conditions>
-                                <Setter Property="Opacity"
-                                        TargetName="templateRoot"
-                                        Value="0.56" />
+                                <Setter TargetName="templateRoot" Property="Opacity" Value="0.56" />
                             </MultiDataTrigger>
                             <MultiDataTrigger>
                                 <MultiDataTrigger.Conditions>
-                                    <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}"
-                                               Value="true" />
-                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}"
-                                               Value="Top" />
+                                    <Condition Binding="{Binding IsSelected, RelativeSource={RelativeSource Self}}" Value="true" />
+                                    <Condition Binding="{Binding TabStripPlacement, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type TabControl}}}" Value="Top" />
                                 </MultiDataTrigger.Conditions>
-                                <Setter Property="Panel.ZIndex"
-                                        Value="1" />
-                                <Setter Property="Foreground"
-                                        TargetName="txt"
-                                        Value="#4886ff" />
-                                <Setter Property="BorderThickness"
-                                        TargetName="_underline"
-                                        Value="0 0 0 2" />
+                                <Setter Property="Panel.ZIndex" Value="1" />
+                                <Setter TargetName="txt" Property="Foreground" Value="#4886ff" />
+                                <Setter TargetName="_underline" Property="BorderThickness" Value="0,0,0,2" />
                             </MultiDataTrigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>

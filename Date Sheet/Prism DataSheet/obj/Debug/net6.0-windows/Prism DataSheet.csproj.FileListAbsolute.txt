@@ -148,3 +148,5 @@ D:\GitProgram\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\refint\Prism D
 D:\GitProgram\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.pdb
 D:\GitProgram\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.genruntimeconfig.cache
 D:\GitProgram\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\ref\Prism DataSheet.dll
+D:\GitPro\DateSheetChoose\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\HelloView.g.cs
+D:\GitPro\DateSheetChoose\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\HelloView.baml

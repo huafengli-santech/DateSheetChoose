@@ -34,3 +34,15 @@ D:\GitProgram\Date Sheet\Common\obj\Release\net6.0-windows\Common.dll
 D:\GitProgram\Date Sheet\Common\obj\Release\net6.0-windows\refint\Common.dll
 D:\GitProgram\Date Sheet\Common\obj\Release\net6.0-windows\Common.pdb
 D:\GitProgram\Date Sheet\Common\obj\Release\net6.0-windows\ref\Common.dll
+D:\GitPro\DateSheetChoose\Date Sheet\Common\bin\Release\net6.0-windows\Common.deps.json
+D:\GitPro\DateSheetChoose\Date Sheet\Common\bin\Release\net6.0-windows\Common.dll
+D:\GitPro\DateSheetChoose\Date Sheet\Common\bin\Release\net6.0-windows\Common.pdb
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\Common.csproj.AssemblyReference.cache
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\Common.AssemblyInfoInputs.cache
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\Common.AssemblyInfo.cs
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\Common.csproj.CoreCompileInputs.cache
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\Common.dll
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\refint\Common.dll
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\Common.pdb
+D:\GitPro\DateSheetChoose\Date Sheet\Common\obj\Release\net6.0-windows\ref\Common.dll

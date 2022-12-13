@@ -2,6 +2,8 @@
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
+using Prism.Services.Dialogs;
+using Prism_DataSheet.ViewModels;
 using Prism_DataSheet.Views;
 using System;
 using System.IO;
@@ -27,6 +29,7 @@ namespace Prism_DataSheet
         }
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterDialog<HelloView, HelloViewModel>();
         }
         /// <summary>
         /// 配置区域适配
@@ -42,6 +45,21 @@ namespace Prism_DataSheet
         protected override IModuleCatalog CreateModuleCatalog()
         {
             return new DirectoryModuleCatalog() { ModulePath = $@"{path}" };
+        }
+
+        protected override void OnInitialized()
+        {
+            var dialog = Container.Resolve<IDialogService>();
+
+            dialog.ShowDialog("HelloView", callback =>
+            {
+                if (callback.Result != ButtonResult.OK)
+                {
+                    Environment.Exit(0);
+                    return;
+                }
+            });
+            base.OnInitialized();
         }
     }
 }
