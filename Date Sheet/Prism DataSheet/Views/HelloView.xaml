@@ -1,15 +1,16 @@
-﻿<UserControl x:Class="Prism_DataSheet.Views.HelloView"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-             xmlns:local="clr-namespace:Prism_DataSheet.Views"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:prism="http://prismlibrary.com/"
-             d:DesignHeight="250"
-             d:DesignWidth="600"
-             prism:ViewModelLocator.AutoWireViewModel="True"
-             mc:Ignorable="d">
+﻿<UserControl
+    x:Class="Prism_DataSheet.Views.HelloView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:local="clr-namespace:Prism_DataSheet.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    d:DesignHeight="250"
+    d:DesignWidth="600"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    mc:Ignorable="d">
     <prism:Dialog.WindowStyle>
         <Style TargetType="Window">
             <Setter Property="prism:Dialog.WindowStartupLocation" Value="CenterScreen" />
@@ -40,77 +41,91 @@
         </i:Interaction.Triggers>
 
         <Grid>
-            <TextBlock HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       FontFamily="../Fonts/#iconfont"
-                       FontSize="250"
-                       Foreground="White"
-                       Text="&#xe60d;" />
-            <StackPanel HorizontalAlignment="Center"
-                        VerticalAlignment="Bottom"
-                        Orientation="Horizontal">
-                <TextBlock FontSize="15"
-                           Foreground="White"
-                           Text="Loading" />
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontFamily="../Fonts/#iconfont"
+                FontSize="250"
+                Foreground="White"
+                Text="&#xe60d;" />
 
-                <Canvas Width="200"
-                        Height="30"
-                        Background="Transparent">
-                    <Canvas.Triggers>
-                        <EventTrigger RoutedEvent="Loaded">
-                            <BeginStoryboard>
-                                <Storyboard RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
-                                    <DoubleAnimation AutoReverse="True"
-                                                     BeginTime="0:0:0.0"
-                                                     Storyboard.TargetName="e1"
-                                                     To="-25"
-                                                     Duration="0:0:0.5" />
-                                    <DoubleAnimation AutoReverse="True"
-                                                     BeginTime="0:0:0.1"
-                                                     Storyboard.TargetName="e2"
-                                                     To="-25"
-                                                     Duration="0:0:0.5" />
-                                    <DoubleAnimation AutoReverse="True"
-                                                     BeginTime="0:0:0.2"
-                                                     Storyboard.TargetName="e3"
-                                                     To="-25"
-                                                     Duration="0:0:0.5" />
-                                    <DoubleAnimation AutoReverse="True"
-                                                     BeginTime="0:0:0.3"
-                                                     Storyboard.TargetName="e4"
-                                                     To="-25"
-                                                     Duration="0:0:0.5" />
-                                    <DoubleAnimation AutoReverse="True"
-                                                     BeginTime="0:0:0.4"
-                                                     Storyboard.TargetName="e5"
-                                                     To="-25"
-                                                     Duration="0:0:0.5" />
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Canvas.Triggers>
-                    <Ellipse Name="e1"
-                             Canvas.Left="30"
-                             Canvas.Top="10"
-                             Style="{StaticResource ellipse}" />
-                    <Ellipse Name="e2"
-                             Canvas.Left="60"
-                             Canvas.Top="10"
-                             Style="{StaticResource ellipse}" />
-                    <Ellipse Name="e3"
-                             Canvas.Left="90"
-                             Canvas.Top="10"
-                             Style="{StaticResource ellipse}" />
-                    <Ellipse Name="e4"
-                             Canvas.Left="120"
-                             Canvas.Top="10"
-                             Style="{StaticResource ellipse}" />
-                    <Ellipse Name="e5"
-                             Canvas.Left="150"
-                             Canvas.Top="10"
-                             Style="{StaticResource ellipse}" />
-                </Canvas>
-            </StackPanel>
+
+            <Canvas
+                Width="200"
+                Height="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Background="Transparent">
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.Y)">
+                                <DoubleAnimation
+                                    AutoReverse="True"
+                                    BeginTime="0:0:0.0"
+                                    Storyboard.TargetName="e1"
+                                    To="-25"
+                                    Duration="0:0:0.5" />
+                                <DoubleAnimation
+                                    AutoReverse="True"
+                                    BeginTime="0:0:0.1"
+                                    Storyboard.TargetName="e2"
+                                    To="-25"
+                                    Duration="0:0:0.5" />
+                                <DoubleAnimation
+                                    AutoReverse="True"
+                                    BeginTime="0:0:0.2"
+                                    Storyboard.TargetName="e3"
+                                    To="-25"
+                                    Duration="0:0:0.5" />
+                                <DoubleAnimation
+                                    AutoReverse="True"
+                                    BeginTime="0:0:0.3"
+                                    Storyboard.TargetName="e4"
+                                    To="-25"
+                                    Duration="0:0:0.5" />
+                                <DoubleAnimation
+                                    AutoReverse="True"
+                                    BeginTime="0:0:0.4"
+                                    Storyboard.TargetName="e5"
+                                    To="-25"
+                                    Duration="0:0:0.5" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+                <TextBlock
+                    Canvas.Top="5"
+                    Margin="5,0"
+                    FontSize="15"
+                    Foreground="White"
+                    Text="Loading" />
+                <Ellipse
+                    Name="e1"
+                    Canvas.Left="70"
+                    Canvas.Top="10"
+                    Style="{StaticResource ellipse}" />
+                <Ellipse
+                    Name="e2"
+                    Canvas.Left="100"
+                    Canvas.Top="10"
+                    Style="{StaticResource ellipse}" />
+                <Ellipse
+                    Name="e3"
+                    Canvas.Left="130"
+                    Canvas.Top="10"
+                    Style="{StaticResource ellipse}" />
+                <Ellipse
+                    Name="e4"
+                    Canvas.Left="160"
+                    Canvas.Top="10"
+                    Style="{StaticResource ellipse}" />
+                <Ellipse
+                    Name="e5"
+                    Canvas.Left="190"
+                    Canvas.Top="10"
+                    Style="{StaticResource ellipse}" />
+            </Canvas>
 
         </Grid>
 

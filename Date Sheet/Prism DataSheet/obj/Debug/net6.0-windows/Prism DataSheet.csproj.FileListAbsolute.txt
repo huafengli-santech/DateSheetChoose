@@ -150,3 +150,35 @@ D:\GitProgram\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataShee
 D:\GitProgram\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\ref\Prism DataSheet.dll
 D:\GitPro\DateSheetChoose\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\HelloView.g.cs
 D:\GitPro\DateSheetChoose\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\HelloView.baml
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.exe
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.deps.json
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.runtimeconfig.json
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism DataSheet.pdb
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\DryIoc.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.DryIoc.Wpf.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Prism.Wpf.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Common.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\bin\Debug\net6.0-windows\Common.pdb
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.AssemblyReference.cache
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\MainWindow.baml
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\HelloView.g.cs
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\MainWindow.g.cs
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\App.g.cs
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet_MarkupCompile.cache
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet_MarkupCompile.lref
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\App.baml
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Views\HelloView.baml
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.g.resources
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.AssemblyInfoInputs.cache
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.AssemblyInfo.cs
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.CoreCompileInputs.cache
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.csproj.CopyComplete
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\refint\Prism DataSheet.dll
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.pdb
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\Prism DataSheet.genruntimeconfig.cache
+D:\GitProgram\DataSheet\Date Sheet\Prism DataSheet\obj\Debug\net6.0-windows\ref\Prism DataSheet.dll
