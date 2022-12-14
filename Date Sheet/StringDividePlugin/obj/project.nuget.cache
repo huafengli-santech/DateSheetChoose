@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rABi3ZhlcuCDe2c4GIYaQ/YSImdaZ9we4+05fAF08cYkW0fS5UZteJ/j55jmH6pyxBsl40D0EZTSCw/efmsFIA==",
+  "dgSpecHash": "RyKBh0mASAuBSZGnUNTr4/fFmhcM2viJBCu0AsT8d4FaJwInehdKhWdDEll424QJHErJhi4/Q+v3O+Zc95HYyQ==",
   "success": true,
-  "projectFilePath": "D:\\GitProgram\\DataSheet\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj",
+  "projectFilePath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46432\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
     "C:\\Users\\46432\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512",

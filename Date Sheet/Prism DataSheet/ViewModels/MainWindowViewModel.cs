@@ -51,13 +51,12 @@ namespace Prism_DataSheet.ViewModels
                 switch (tempModule.ModuleName)
                 {
                     case "LoadModule":
-                        Modules.Add(new ModulesInfo() { DisplayName = "模块生成", Name = tempModule.ModuleName });
+                        _regionManager.RequestNavigate("LoadModuleRegion", "LoadModule");
+                        //Modules.Add(new ModulesInfo() { DisplayName = "模块生成", Name = tempModule.ModuleName });
                         break;
                     case "StringDivide":
-                        Modules.Add(new ModulesInfo() { DisplayName = "型号分析", Name = tempModule.ModuleName });
-                        break;
-                    case "ModuleUpdate":
-                        Modules.Add(new ModulesInfo() { DisplayName = "模块刷新", Name = tempModule.ModuleName });
+                        _regionManager.RequestNavigate("ContentRegion", "StringDivide");
+                        //Modules.Add(new ModulesInfo() { DisplayName = "型号分析", Name = tempModule.ModuleName });
                         break;
                 }
             }

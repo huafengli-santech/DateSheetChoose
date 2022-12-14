@@ -38,8 +38,7 @@ namespace LoadModules.ViewModels
         }
         private void CoptToClipFunc()
         {
-            Clipboard.SetText(BuildPath);
-            MessageBox.Show("模板文件生成路径已经复制到粘贴板", "模块文件生成提示");
+            System.Diagnostics.Process.Start("explorer.exe", BuildPath);
         }
         private void OpenSaveFileFunc()
         {

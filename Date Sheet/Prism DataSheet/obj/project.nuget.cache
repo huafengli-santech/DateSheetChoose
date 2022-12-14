@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/kcdrXSovAlwYOIBURYiOO/ExoBJEnpduWTvuCwf8ykL027BY3h+RMj982D3lDs0AVdKYWCvGrlVYuJVOb3Rog==",
+  "dgSpecHash": "T/4IaD+hpxaXLLwlDO9o/ZcROzI9LNjCR2vb/nvF1XDWT/PnO3ukaGNI+M3bjjNBOVYCkEDSjk91vKN/gzhwjA==",
   "success": true,
-  "projectFilePath": "D:\\GitProgram\\DataSheet\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
+  "projectFilePath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\46432\\.nuget\\packages\\dryioc.dll\\4.7.7\\dryioc.dll.4.7.7.nupkg.sha512",
     "C:\\Users\\46432\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

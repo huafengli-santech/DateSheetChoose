@@ -143,11 +143,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitProgram\\DataSheet\\Date Sheet\\LoadModules\\LoadModules.csproj",
+      "projectUniqueName": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\LoadModules\\LoadModules.csproj",
       "projectName": "LoadModules",
-      "projectPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\LoadModules\\LoadModules.csproj",
+      "projectPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\LoadModules\\LoadModules.csproj",
       "packagesPath": "C:\\Users\\46432\\.nuget\\packages\\",
-      "outputPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\LoadModules\\obj\\",
+      "outputPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\LoadModules\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\46432\\AppData\\Roaming\\NuGet\\NuGet.Config",

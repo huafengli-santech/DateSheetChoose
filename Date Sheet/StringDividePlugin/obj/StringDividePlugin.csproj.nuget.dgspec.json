@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitProgram\\DataSheet\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj": {}
+    "D:\\GitPro\\DateSheetChoose\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj": {}
   },
   "projects": {
-    "D:\\GitProgram\\DataSheet\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj": {
+    "D:\\GitPro\\DateSheetChoose\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitProgram\\DataSheet\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj",
+        "projectUniqueName": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj",
         "projectName": "StringDividePlugin",
-        "projectPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj",
+        "projectPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\StringDividePlugin\\StringDividePlugin.csproj",
         "packagesPath": "C:\\Users\\46432\\.nuget\\packages\\",
-        "outputPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\StringDividePlugin\\obj\\",
+        "outputPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\StringDividePlugin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\46432\\AppData\\Roaming\\NuGet\\NuGet.Config",
