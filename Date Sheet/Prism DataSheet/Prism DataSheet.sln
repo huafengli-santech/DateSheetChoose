@@ -13,6 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringDividePlugin", "..\St
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{5023988C-7FB9-4AA2-A6EC-B73064E59833}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Winform", "Winform", "{9BA14526-E900-4221-84A6-56994F5DA7F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSheetCM", "C:\Users\46432\source\repos\CMTest\DataSheetCM.csproj", "{A50A3873-8464-4D3F-8653-468A46700175}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TXTCodeAndDcode", "C:\Users\46432\source\repos\TXTCodeAndDcode\TXTCodeAndDcode.csproj", "{FA92E92E-78E5-421B-A2EC-C6CC68488E90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +41,14 @@ Global
 		{006294DE-17DE-415F-95B0-13F647F33EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{006294DE-17DE-415F-95B0-13F647F33EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{006294DE-17DE-415F-95B0-13F647F33EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A50A3873-8464-4D3F-8653-468A46700175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50A3873-8464-4D3F-8653-468A46700175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50A3873-8464-4D3F-8653-468A46700175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A50A3873-8464-4D3F-8653-468A46700175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA92E92E-78E5-421B-A2EC-C6CC68488E90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA92E92E-78E5-421B-A2EC-C6CC68488E90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA92E92E-78E5-421B-A2EC-C6CC68488E90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA92E92E-78E5-421B-A2EC-C6CC68488E90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +56,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2205406B-7876-423B-A236-4DEDA792A63A} = {5023988C-7FB9-4AA2-A6EC-B73064E59833}
 		{006294DE-17DE-415F-95B0-13F647F33EAB} = {5023988C-7FB9-4AA2-A6EC-B73064E59833}
+		{A50A3873-8464-4D3F-8653-468A46700175} = {9BA14526-E900-4221-84A6-56994F5DA7F9}
+		{FA92E92E-78E5-421B-A2EC-C6CC68488E90} = {9BA14526-E900-4221-84A6-56994F5DA7F9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CD5A5D63-ADD7-49EB-9E9D-C792C8494A34}

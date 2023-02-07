@@ -957,11 +957,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
+      "projectUniqueName": "D:\\GitProgram\\DataSheet\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
       "projectName": "Prism DataSheet",
-      "projectPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
+      "projectPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\Prism DataSheet\\Prism DataSheet.csproj",
       "packagesPath": "C:\\Users\\46432\\.nuget\\packages\\",
-      "outputPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Prism DataSheet\\obj\\",
+      "outputPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\Prism DataSheet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\46432\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -978,8 +978,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Common\\Common.csproj": {
-              "projectPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Common\\Common.csproj"
+            "D:\\GitProgram\\DataSheet\\Date Sheet\\Common\\Common.csproj": {
+              "projectPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\Common\\Common.csproj"
             }
           }
         }

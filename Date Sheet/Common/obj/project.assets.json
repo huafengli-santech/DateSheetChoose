@@ -143,11 +143,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Common\\Common.csproj",
+      "projectUniqueName": "D:\\GitProgram\\DataSheet\\Date Sheet\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Common\\Common.csproj",
+      "projectPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\Common\\Common.csproj",
       "packagesPath": "C:\\Users\\46432\\.nuget\\packages\\",
-      "outputPath": "D:\\GitPro\\DateSheetChoose\\Date Sheet\\Common\\obj\\",
+      "outputPath": "D:\\GitProgram\\DataSheet\\Date Sheet\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\46432\\AppData\\Roaming\\NuGet\\NuGet.Config",
