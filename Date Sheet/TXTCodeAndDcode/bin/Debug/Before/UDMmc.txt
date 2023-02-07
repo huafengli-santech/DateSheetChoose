@@ -1,0 +1,8 @@
+Number_of_axes 轴数量 ：2 2轴 | 4 4轴
+Continuous_Current(Peak is double) 持续电流(峰值是两倍) ：A 2×5A | B 2×10A | C 2×20A | D 4×5A | E 4×10A | F 4×20A | G 2×5A&2×10A | H 2×5A&2×20A | I 2×10A&2×20A | J 4×2.5A | K 2×2.5A
+Total_number_of_digital_incremental_encoders 数字增量式编码器的总数 ：2 2个 | 4 4个(4轴单位选4个)
+Absolute_encoders_type 绝对式编码器类型 ：N 没有 | U 用户选择 | E EnDAT2.1(digital)/2.2 | S Smart-Abs | P Panasonic | B Biss-A/B/C | I SSI
+Number_of_absolute_encoders_interface 绝对式编码器接口数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个 | 4 4个
+STO 支持STO ：Y 支持 | N 不支持
+I/O_configuration I/O配置 ：N 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | S 输入和限位是24V/SINK(NPN),输出是24V/SOURCE(PNP) | A 输入和限位是5V/SOURCE(PNP),输出是24V/SOURCE(PNP) | B 输入和限位是5V/SINK(NPN),输出是24V/SOURCE(PNP)
+5V_feedback_supply 5V反馈供电 ：A 内置的 | B 外置的

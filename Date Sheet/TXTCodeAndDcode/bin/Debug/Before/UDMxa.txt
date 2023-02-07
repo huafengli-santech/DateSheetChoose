@@ -1,0 +1,10 @@
+Drive_Axes 驱动轴数 ：1 1轴 | 2 2轴 | 3 3轴
+Current_Rating 电流额定值 ：A 5/10A | B 10/20A | C 15/30A
+500kHz_SinCos_Encoder_Channel 500kHz_SinCos编码器通道数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+Absolute_Encoders_Channels 绝对式编码器通道的数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+Functional_Safety 功能性安全 ：N 没有 | T 支持STO&SS1
+16-bit_SinCos_and_Analog_Input 16bit_SinCos和模拟输入 ：N 不支持(是12bit) | Y 支持
+Reserved 保留项 ：N 没有
+Reserved 保留项 ：N 没有
+Reserved 保留项 ：N 没有
+Reserved 保留项 ：N 没有

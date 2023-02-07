@@ -1,0 +1,4 @@
+Number_of_axes/drive 轴/驱动器的数量 ：1 1个 | 2 2个
+Current 电流 ：A 3.3/10A | B 6.6/20A | C 10/30A | D 13.3/40A
+Special_Option 特殊选项 ：N 没有
+Type_of_motor 电机类型 ：T 仅三相电机 | S 仅单相电机

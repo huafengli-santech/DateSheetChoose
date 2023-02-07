@@ -1,0 +1,17 @@
+Power_Supply 电源供电 ：A 48V/32A | B 48V/64A | C 96V/32A | D 96V&48V
+Number_of_Drive 驱动器数量 ：1 1个 | 2 2个
+Current 电流 ：A 3.3/10A | B 6.6/20A | C 10/30A | D 13.3/40A
+Voltage_Connected_to 连接电源电压 ：A 48V | B 96V
+Type_of_motor 电机类型 ：T 仅三相电机 | S 仅单相电机
+Number_of_Drive 驱动器数量 ：0 0个 | 1 1个 | 2 2个
+Current 电流 ：A 3.3/10A | B 6.6/20A | C 10/30A | D 13.3/40A | 0 没有
+Voltage_Connected_to 连接电源电压 ：A 48V | B 96V | 0 没有
+Type_of_motor 电机类型 ：T 仅三相电机 | S 仅单相电机 | 0 没有
+Number_of_Drive 驱动器数量 ：0 0个 | 1 1个 | 2 2个
+Current 电流 ：A 3.3/10A | B 6.6/20A | C 10/30A | D 13.3/40A | 0 没有
+Voltage_Connected_to 连接电源电压 ：A 48V | B 96V | 0 没有
+Type_of_motor 电机类型 ：T 仅三相电机 | S 仅单相电机 | 0 没有
+Number_of_Drive 驱动器数量 ：0 0个 | 1 1个 | 2 2个
+Current 电流 ：A 3.3/10A | B 6.6/20A | C 10/30A | D 13.3/40A | 0 没有
+Voltage_Connected_to 连接电源电压 ：A 48V | B 96V | 0 没有
+Type_of_motor 电机类型 ：T 仅三相电机 | S 仅单相电机 | 0 没有

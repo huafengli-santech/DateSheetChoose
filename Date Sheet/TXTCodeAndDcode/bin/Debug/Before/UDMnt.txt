@@ -1,0 +1,8 @@
+Number_of_axes 轴数量 ：1 1轴 | 2 2轴
+Continuous_Current(Peak_is_double) 持续电流(峰值是两倍) ：A 2.5/5A | B 5/10A | C 10/20A
+Total_number_of_encoder_channels 编码器通道的总数 ：1 1个(仅适用于单轴单元) | 2 2个
+500kHz_SinCos 500kHz_SinCos编码器通道数 ：0 0个 | 1 1个 | 2 2个
+10MHz_Sincos 10MHz_SinCos编码器通道数 ：0 0个 | 1 1个 | 2 2个
+Absolute_encoders_type 绝对式编码器类型 ：N 没有 | U 所有 | E EnDAT2.1(digital)/2.2 | S Smart-Abs | P Panasonic | B Biss-A/B/C
+Number_of_absolute_encoders_interfaces 绝对式编码器接口的数量 ：0 0个 | 1 1个 | 2 2个
+I/O_configuration IO配置 ：N 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | D 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | S 输入和限位是24V/SINK(NPN),输出是24V/SOURCE(PNP) | R 输入和限位是5V/SOURCE(PNP),输出是5V/SOURCE(PNP) | T 输入和限位是5V/SINK(NPN),输出是5V/SOURCE(PNP) | U 输出和输入是24V/SOURCE(PNP),限位是24V/SINK(NPN)

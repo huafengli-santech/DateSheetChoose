@@ -1,0 +1,6 @@
+Number_of_axes 轴数量 ：2 2轴 | 4 4轴
+Continuous_Current(Peak_is_double) 持续电流(峰值是两倍) ：A 1.25A | B 2.5A
+Total_number_of_feedback_channels 反馈通道的总数 ：2 2个 | 4 4个(4轴单元需要4个)
+Absolute_encoders_type 绝对式编码器类型 ：N 没有 | U 用户选择 | E EnDAT2.1(digital)/2.2 | S Smart-Abs | P Panasonic | B Biss-A/B/C | I SSI
+Number_of_absolute_encoders_interfaces 绝对式编码器接口的数量 ：0 0个 | 1 1个 | 2 2个
+I/O_configuration IO配置 ：N 输出和限位是24V/SOURCE(PNP),输入是24V/SINK(NPN) | S 输入和限位是24V/SINK(NPN),输出是24V/SOURCE(PNP) | R 限位是5V/SOURCE(PNP),输入是5V/SINK(NPN),输出是24V/SOURCE(PNP) | T 输入和限位是5V/SINK(NPN),输出是5V/SOURCE(PNP) | A 用霍尔,无限位,输入是24V/SINK(NPN),输出是24V/SOURCE(PNP) | B 用霍尔,无限位,输入是5V/SINK(NPN),输出是24V/SOURCE(PNP) | C 用霍尔,无限位,输入是5V/SINK(NPN),输出是24V/SOURCE(PNP)

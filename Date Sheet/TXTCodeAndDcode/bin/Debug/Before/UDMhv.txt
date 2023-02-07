@@ -1,0 +1,10 @@
+Number_of_built-in_drive 内置驱动器的数量 ：1 1个 | 2 2个
+Voltage&current_rating_of_built-in_drive 内置驱动器的电压和电流等级(持续/峰值) ：A 400-480V,5/10A | B 400-480V,10/20A | C 400-480V,15/30A | D 400-480V,20/20A+5/10A | E 230V,5/15A | F 230V,10/30A | G 230V,15/45A | H 230V,20/60A
+250kHz_SinCos_encoder_interface 250kHz_SinCos编码器接口 ：0 0个 | 1 1个 | 2 2个、
+Total_number_of_feedback_channel 反馈通道的总数 ：2 2个 | 4 4个
+Absolute_encoder_type 绝对式编码器类型 ：N 没有 | E EnDAT2.1(digital)/2.2 | S Smart-Abs | P Panasonic | B Biss-A/B/C | H Hiperface | R Resolver | I SSI
+Number_of_absolute_encoder_channel 绝对式编码器通道的数量 ：0 0个 | 1 1个 | 2 2个
+STO 支持STO ：Y 支持 | N 不支持
+I/O_Configuration I/O配置 ：N 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | D 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | S 输入和限位是24V/SINK(NPN),输出是24V/SOURCE(PNP) | U 输入是24V/SOURCE(PNP),限位是24V/SINK(NPN),输出是24V/SOURCE(PNP)
+Built-in_Shunt_Resistor 内置分流电阻 ：N 没有 | A 230Vac为50Ω/300W | B 480Vac为150Ω/300W
+NanoPWM 支持NanoPWM ：N 不支持

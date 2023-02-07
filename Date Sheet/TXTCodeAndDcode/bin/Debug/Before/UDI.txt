@@ -1,0 +1,9 @@
+Type 类型 ：lt 精简的 | hp 高性能的
+Number_of_axes 轴号数 ：2 2轴 | 4 4轴
+Total_number_of_encoder_channel 编码器通道总数 ：2 2个 | 4 4个
+500kHz_SinCos_encoder_interface 500kHz的SinCos编码器通道 ：0 0个 | 1 1个(仅HP) | 2 2个(仅HP) | 3 3个(仅HP) | 4 4个(仅HP)
+10MHz_SinCos_encoder_interface 10MHz的SinCos编码器通道 ：0 0个 | 1 1个(仅HP) | 2 2个(仅HP) | 3 3个(仅HP) | 4 4个(仅HP)
+Absolute_encoder_type 绝对式编码器类型 ：U 所有 | N 没有 | E 支持EnDat2.1(digital)/2.2 | S Smart-abs | P Panasonic | B Biss-A/B/C
+Number_of_Absolute_encoder_interface 绝对式编码器接口数量 ：0 0个 | 1 1个 | 2 2个
+EtherCAT_Master EtherCAT主站 ：1 任何的主站
+I/O_configuration I/O配置 ：N 输入和限位是24V/SOURCE(PNP);输出是24V/SOURCE(PNP) | D 输入和限位是24V/SOURCE(PNP);输出是24V/SOURCE(PNP) | S 输入和限位是24V/SINK(NPN);输出是24V/SINK(NPN) | R 输入和限位是5V/SOURCE(PNP);输出是5V/SOURCE(PNP) | T 输入和限位是5V/SINK(NPN);输出是5V/SOURCE(PNP) | U 输出和输入是24V/SOURCE(PNP),限位是24V/SINK(NPN)

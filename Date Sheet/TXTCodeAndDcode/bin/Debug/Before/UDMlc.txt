@@ -1,0 +1,8 @@
+Number_of_axes 轴数量 ：2 2轴 | 4 4轴
+Continuous_Current(Peak_is_double) 持续电流(峰值是两倍) ：001 1.25A | 002 2.5A | 005 5A(仅双轴版本)
+Total_number_of_feedback_channel 反馈通道的总数 ：2 2个 | 4 4个(4轴和2轴5A的需要4个)
+Absolute_encoders_type 绝对式编码器类型 ：N 没有 | U 用户选择 | E EnDAT2.1(digital)/2.2 | S Smart-Abs | P Panasonic | B Biss-A/B/C | I SSI
+Number_of_Absolute_encoders_interface 绝对式编码器通道的数量 ：0 0个 | 1 1个 | 2 2个
+EtherCAT_Master EtherCAT主站 ：1 任何主站
+Type_of_motor 电机类型 ：0 任何电机
+I/O_Configuration I/O配置 ：N 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | D 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | S 输入和限位是24V/SINK(NPN),输出是24V/SOURCE(PNP) | R 输入和限位是5V/SOURCE(PNP),输出是5V/SOURCE(PNP) | T 输入和限位是5V/SINK(NPN),输出是5V/SOURCE(PNP)

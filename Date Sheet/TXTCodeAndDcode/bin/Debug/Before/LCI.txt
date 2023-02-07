@@ -1,0 +1,5 @@
+Segment_and_Array_Based_Triggering_Modes 基于段和数组的触发模式 ：Y 支持 | N 不支持
+External_Clock_Synchronization 外时钟同步 ：Y 支持 | N 不支持
+Virtual_Encoder_Output 虚拟编码器输出 ：Y 支持 | N 不支持
+Reserved_for_Future 保留选项 ：N 没有
+Reserved_for_Future 保留选项 ：N 没有

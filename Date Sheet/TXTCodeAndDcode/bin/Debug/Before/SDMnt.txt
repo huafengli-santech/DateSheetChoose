@@ -1,0 +1,4 @@
+Number_of_integrated_step_drive 集成步进驱动器的数量 ：4 4个 | 8 8个
+Input_voltage 输入电压 ：040A 内置40Vdc电机供电,输入电压95Vac-240Vac | 040D 输入电压12Vdc-40Vdc
+Maximum_motor_current 最大电机电流 ：003 3A
+Special_option_and_feature 特殊选项和功能 ：01 适用于任何基于EtherCAT_SPiiPlus网络

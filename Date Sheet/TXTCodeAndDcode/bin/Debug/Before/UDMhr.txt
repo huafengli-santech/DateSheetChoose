@@ -1,0 +1,11 @@
+Type 类型 ：hr hr | br br
+Drive_Axes 驱动轴数 ：1 1个 | 2 2个 | 3 3个
+Current_rating 额定电流 ：A 5/10A | B 10/20A | C 15/30A
+500kHz_SinCos_Encoder_Channel 500kHz_SinCos的编码器通道 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+Absolute_Encoder_Channel 绝对式编码器通道 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+Functional_Safety 功能性安全 ：N 没有 | T 支持STO&SS1
+Reversed_for_Future_Use 留作将来使用 ：N 没有
+Reversed_for_Future_Use 留作将来使用 ：N 没有
+Reversed_for_Future_Use 留作将来使用 ：N 没有
+Reversed_for_Future_Use 留作将来使用 ：N 没有
+Reversed_for_Future_Use 留作将来使用 ：N 没有

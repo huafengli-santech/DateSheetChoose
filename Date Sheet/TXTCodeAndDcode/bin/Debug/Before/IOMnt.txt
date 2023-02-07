@@ -1,0 +1,3 @@
+Number_of_Digital_Input&Output 数字输入和输出的数量 ：8-8 8输入和8输出 | 16-16 16输入和16输出 | 32-16 32输入和16输出 | 32-32 32输入和32输出
+Number_of_Analog_Input&Output 模拟输入和输出的数量 ：00-00 无模拟输入和输出
+Master 主站 ：01 任何ACS的EtherCAT主站

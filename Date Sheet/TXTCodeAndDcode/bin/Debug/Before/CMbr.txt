@@ -1,0 +1,18 @@
+Built-In_Drive_Axes 内置驱动器轴数 ：1 1轴 | 2 2轴 | 3 3轴
+Current_Rating_of_built-in_drive 内置驱动器的额定电流 ：A 5/10A | B 10/20A | C 15/30A
+500kHz_SinCos_Encoder_Channel 500kHz_SinCos编码器通道 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+Absolute_Encoder_Channel 绝对式编码器通道数 ：0 0个 | 1 1个 | 2 2个 | 3 3个
+Functional_Safety 功能性安全 ：N 没有 | T 支持STO&SS1
+Reserved 保留 ：N 没有
+Max_Number_of_Controller_Axes 控制器轴的最大数量 ：4 4个 | 8 8个 | A 16个 | B 32个 | C 64个
+Max_MPU_Cycle_Rate 最大MPU循环率(kHz) ：D 默认(8轴或以下为2kHz, 16或32轴为1kHz)
+Max_number_of_ACSL+_buffer ACSPL+的buffer区最大数量 ：D 默认(10或者控制器最大轴数) | A 16个 | B 32个 | C 64个 
+ServoBoost_number_of_axes_supported ServoBoost支持的轴号数 ：N 0个 | A 4个 | B 8个 | C 12个
+G-Code 支持G-Code ：N 不支持 | G 支持G-Code
+Input_shaping 支持Input_shaping ：N 不支持 | S 支持
+PDMnt_Installed 内部安装PDMnt ：N 不支持 | P 内置PDMnt(要求控制器轴数最大为8或者更高) 
+Reserved 保留选项 ：N 没有
+Reserved 保留选项 ：N 没有
+Reserved 保留选项 ：N 没有
+Reserved 保留选项 ：N 没有
+Reserved 保留选项 ：N 没有

@@ -1,0 +1,6 @@
+Support_fpr_AqB_and_P&D_output 支持AqB和P&D的输出 ：Y 支持 | N 不支持
+Future_Option 以后的选项 ：Y 支持 | N 不支持
+Future_Option 以后的选项 ：Y 支持 | N 不支持
+Future_Option 以后的选项 ：Y 支持 | N 不支持
+Future_Option 以后的选项 ：Y 支持 | N 不支持
+Future_Option 以后的选项 ：Y 支持 | N 不支持

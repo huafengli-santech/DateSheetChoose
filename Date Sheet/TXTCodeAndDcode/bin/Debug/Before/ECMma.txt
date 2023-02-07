@@ -1,0 +1,10 @@
+Number_of_Axes 轴数量 ：2 2个 | 4 4个
+Current_Rating 额定电流(正弦的峰值安培) ：A 保留 | B 所有轴5/10A最高150Vdc | C 所有轴10/20A最高150Vdc | D 所有轴15/30A最高100Vdc
+Number_of_500kHz_SinCos_Encoder 500kHz_SinCos编码器的数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个 | 4 4个
+Number_of_Absolute_Encoder_Channel 绝对式编码器的数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个 | 4 4个
+Functional_Safety 功能性安全 ：N 没有 | T 支持STO&SS1
+Reserved 保留 ：N 没有功能
+Reserved 保留 ：N 没有功能
+Reserved 保留 ：N 没有功能
+Reserved 保留 ：N 没有功能
+Reserved 保留 ：N 没有功能

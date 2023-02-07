@@ -1,0 +1,18 @@
+Number_of_built-in_drive 内置驱动器数量 ：1 1个 | 2 2个
+Voltage_&_current_rating_of_built-in_drive 内置驱动器的额定电压和电流 ：A 400-480V,5/10A | B 400-480V,10/20A | C 400-480V,15/30A | D 400-480V,20/20+5/10A | E 230V,5/15A | F 230V,10/30A | G 230V,15/45A | H 230V,20/60A
+250kHz_Sin-Cos_encoder_interface 250kHz_Sin-Cos编码器接口 ：0 0个 | 1 1个 | 2 2个
+Total_number_of_feedback_channel 反馈通道的总数 ：2 2个 | 4 4个
+Absolute_encoder_type 绝对式编码器类型 ：N 没有 | E EnDAT2.1(digital)/2.2 | S Smart-Abs | P Panasonic | H Hiperface | R Resolver | B Biss-A/B/C | I SSI
+Number_of_absolute_encoder_channel 绝对式编码器通道数量 ：0 0个 | 1 1个 | 2 2个
+STO 支持STO ：Y 支持 | N 不支持
+Maximum_number_of_axes 轴的最大数量 ：2 2个 | 4 4个 | 8 8个 | A 16个 | B 32个
+ECAT_3rd_party_Servo_Drive ECAT第三方伺服驱动器 ：0 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 16轴 | B 32轴
+ECAT_3rd_party_step_motor_drives ECAT第三方步进电机驱动器(开环或闭环) ：0 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 16轴 | B 32轴
+ECAT_3rd_party_IO_EtherCAT_node ECAT第三方IO节点 ：W 32个(包括自动FOC) | X 64个
+G-Code,Flexible_configuration,Both G-Code和灵活配置两者都 ：N 没有 | G G-code | F 灵活配置 | T 两者都有
+ServoBoost_number_of_axes_supported ServoBoost支持的轴号数(仅HP版本) ：N 0个 | A 4个 | B 8个 | C 12个 | D 16个 | E 20个 | F 24个 | G 28个 | H 32个
+Input_shaping,Learning_Boost,Both 支持Input_shaping或Learning_Boost或两者都有 ：N 都不支持 | L 支持Learning_Boost | Y 支持Input_shaping | B 两者都支持
+I/O_configuration IO配置 ：N 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | D 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | S 输入和限位是24V/SINK(NPN),输出是24V/SOURCE(PNP) | U 输入是24V/SOURCE(PNP),限位是24V/SINK(NPN),输出是24V/SOURCE(PNP)
+Built-in_Shunt_Resistor 内置分流电阻 ：N 没有 | A 230Vac为50Ω/300W | B 480Vac为150Ω/300W
+XL_scan XL扫描 ：：N 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 10个 | B 11个 | C 12个 | D 13个 | E 14个 | F 15个 | G 16个
+Number_of_ACSPL+_buffer ACSPL+_buffer的数量 ：D 默认 | A 16个 | B 32个

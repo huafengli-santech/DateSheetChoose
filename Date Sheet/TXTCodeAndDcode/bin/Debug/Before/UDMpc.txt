@@ -1,0 +1,11 @@
+Number_of_axes/drives 轴/驱动器的数量 ：1 1个 | 2 2个
+Continuous_current(Peak_is_double) 持续电流(峰值是两倍) ：002 2.5A | 005 5A | 010 10A
+Number_of_250kHz_SIN-COS_encoder_interface 250kHz_SIN-COS编码器接口数量 ：0 0个 | 1 1个 | 2 2个
+Encoder_channels_per_axis 每轴的编码器通道数 ：1 1个 | 2 2个
+Absolute_encoders_type 绝对式编码器类型 ：N 没有 | E EnDat2.2/2.1(digital) | P Panasonic | H Hiperface | S Smart-Abs | B Biss-A/B/C | I SSI
+Number_of_Absolute_encoders_interface 绝对式编码器接口的数量 ：0 0个 | 1 1个 | 2 2个
+UDMPC2-048-BOB_kit,assembled 已组装UDMPC2-048-BOB套件 ：Y 是的 | N 没有
+EtherCAT_Master EtherCAT主站 ：1 任何主站
+Type_of_motors 电机类型 ：0 任何电机
+Installed_heatsink 安装散热片 ：N 没有安装
+I/O_configuration I/O配置 ：N 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | D 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | S 输入和限位是24V/SINK(NPN),输出是24V/SOURCE(PNP) | R 输入和限位是5V/SOURCE(PNP),输出是5V/SOURCE(PNP) | T 输入和限位是5V/SINK(NPN),输出是5V/SOURCE(PNP) | U 输出和输入是24V/SOURCE(PNP),限位是24V/SINK(NPN)

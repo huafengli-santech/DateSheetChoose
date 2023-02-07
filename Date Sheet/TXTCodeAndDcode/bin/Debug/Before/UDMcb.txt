@@ -1,0 +1,10 @@
+Number_of_axes/drive 轴/驱动器的数量 ：1 1个 | 2 2个
+Current 电流 ：A 3.3/10A | B 6.6/20A | C 10/30A | D 13.3/40A
+Maximum_Voltage 最大电压 ：A 60V | B 100V
+500kHz_Sin-Cos_encoder_interface 500kHz_SinCos的编码器接口 ：0 0个 | 1 1个 | 2 2个
+Absolute_encoder_type 绝对式编码器类型 ：N 没有 | U 用户选择 | E EnDat2.1/2.2(digital) | B Biss-ABC | I SSI
+Number_of_absolute_encoder_interface 绝对式编码器接口的数量 ：0 0个 | 1 1个 | 2 2个
+Limit_Switch 限位开关 ：A 5V,SOURCE/PNP | B 5V,SINK/NPN | C 24V,SOURCE/PNP | B 24V,SINK/NPN
+Digital_Input 数字输入 ：A 5V,双端型 | B 24V,双端型
+Digital_Output 数字输出 ：A 5V&24V,SOURCE/PNP | B 5V&24V,SINK/NPN
+Special_Option 特殊选项 ：N 没有

@@ -1,0 +1,10 @@
+Drive_Axes 驱动轴数 ：2 2个 | 4 4个
+Current_and_Bus_voltage_Rating 额定电流和母线电压 ：A 2.5/5A最高150VDC | B 5/10A最高150VDC | C 10/20A最高150VDC
+500kHz_SinCos_Encoder_Channel 500kHz_SinCos编码器通道 ：0 0个 | 1 1个 | 2 2个 | 3 3个 | 4 4个
+10MHz_SinCos_Encoder_Channel 10MHz_SinCos编码器通道 ：0 0个 | 1 1个 | 2 2个 | 3 3个 | 4 4个
+Absolute_Encoder_Channel 绝对式编码器通道 ：0 0个 | 1 1个 | 2 2个 | 3 3个 | 4 4个
+Functional_safety 功能性安全 ：N 没有 | T 支持STO&SS1
+Non-Linear_Control 非线性控制 ：N 没有 | C 支持非线性控制
+Reserved_for_Future 保留位 ：N 没有功能
+Reserved_for_Future 保留位 ：N 没有功能
+Reserved_for_Future 保留位 ：N 没有功能

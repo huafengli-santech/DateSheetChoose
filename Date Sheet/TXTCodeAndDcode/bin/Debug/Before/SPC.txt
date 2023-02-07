@@ -1,0 +1,8 @@
+SPiiPlsSPC_Version SPiiPlsSPC版本 ：S 标准版 | P 专业版
+3D_and_PCB_module 3D和PCB模块 ：N 不支持 | 3 3D模块 | P PCB模块
+Camera_and_machine_vision_feature 支持相机和机器视觉功能 ：N 不支持 | L 精简版 | P 专业版
+Future_use 未来使用项 ：N 留作将来使用
+Future_use 未来使用项 ：N 留作将来使用
+Future_use 未来使用项 ：N 留作将来使用
+Future_use 未来使用项 ：N 留作将来使用
+Future_use 未来使用项 ：N 留作将来使用

@@ -1,0 +1,11 @@
+C:\Users\46432\source\repos\TXTCodeAndDcode\bin\Debug\TXTCodeAndDcode.exe.config
+C:\Users\46432\source\repos\TXTCodeAndDcode\bin\Debug\TXTCodeAndDcode.exe
+C:\Users\46432\source\repos\TXTCodeAndDcode\bin\Debug\TXTCodeAndDcode.pdb
+C:\Users\46432\source\repos\TXTCodeAndDcode\obj\Debug\TXTCodeAndDcode.csproj.AssemblyReference.cache
+C:\Users\46432\source\repos\TXTCodeAndDcode\obj\Debug\TXTCodeAndDcode.csproj.SuggestedBindingRedirects.cache
+C:\Users\46432\source\repos\TXTCodeAndDcode\obj\Debug\TXTCodeAndDcode.Form1.resources
+C:\Users\46432\source\repos\TXTCodeAndDcode\obj\Debug\TXTCodeAndDcode.Properties.Resources.resources
+C:\Users\46432\source\repos\TXTCodeAndDcode\obj\Debug\TXTCodeAndDcode.csproj.GenerateResource.cache
+C:\Users\46432\source\repos\TXTCodeAndDcode\obj\Debug\TXTCodeAndDcode.csproj.CoreCompileInputs.cache
+C:\Users\46432\source\repos\TXTCodeAndDcode\obj\Debug\TXTCodeAndDcode.exe
+C:\Users\46432\source\repos\TXTCodeAndDcode\obj\Debug\TXTCodeAndDcode.pdb

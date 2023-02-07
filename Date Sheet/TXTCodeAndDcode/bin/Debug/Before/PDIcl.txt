@@ -1,0 +1,5 @@
+Number_of_axes 轴数量 ：2 2轴 | 4 4轴
+Total_number_of_feedback_channel 反馈通道的总数 ：2 2个 | 4 4个
+Absolute_encoder_type 绝对式编码器类型 ：N 没有 | U 用户选择 | E 仅EnDat2.2&2.1(digital) | S Smart-Abs | P Panasonic | B Biss-A/B/C | I SSI | A Sanyo-ABS
+Number_of_absolute_encoder_interface 绝对式编码器接口数量 ：0 0个 | 1 1个 | 2 2个 | 3 3个 | 4 4个
+I/O_Configuration I/O配置 ：N 输入和限位为24V/SOURCE(PNP),输出为24V/SOURCE(PNP) | S 输入和限位为24V/SINK(NPN),输出为24V/SINK(NPN) | T 输入和限位为5V/SINK(NPN),输出为5V/SOURCE(PNP)

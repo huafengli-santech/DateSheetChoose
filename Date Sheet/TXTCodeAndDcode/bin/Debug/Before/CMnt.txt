@@ -1,0 +1,15 @@
+Number_of_built-in_drive 内置驱动器数量(85Vac-265Vac) ：1 1个 | 2 2个
+Current_rating_of_builtin_drive 内置驱动器的电流额定值 ：2 2.5/5A | 5 5/10A | 7 7.5/15A
+No.of_250kHz_SinCos_encoder_interface 250kHz_SinCos编码器接口数量 ：0 0个 | 1 1个 | 2 2个
+Encoder_channel_per_axis 每轴编码器通道数 ：1 1个 | 2 2个
+Absolute_encoder_type 绝对式编码器类型 ：N 没有 | E EnDAT2.1(digital/2.2) | S Smart-Abs | P Panasonic | B Biss-A/B/C | H Hiperface | R Resolver | I SSI
+Number_of_Absolute_encoder_interface 绝对式编码器接口数量 ：0 0个 | 1 1个 | 2 2个
+STO 支持STO ：Y 支持 | N 不支持
+Maximum_number_of_axes 轴的最大数量 ：2 2个 | 4 4个 | 8 8个 | 16 16个 | 32 32个
+3rd_party_EtherCAT_servo_drives 第三方EtherCAT伺服驱动器 ：0 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 16轴 | B 32轴
+3rd_party_EtherCAT_step_motor_drives 第三方EtherCAT步进电机驱动器 ：0 没有 | 1 1个 | 2 2个 | 3 3个 | 4 4个 | 5 5个 | 6 6个 | 7 7个 | 8 8个 | 9 9个 | A 16轴 | B 32轴
+ECAT_3rd_party_IO_EtherCAT_nodes ECAT第三方IO_EtherCAT节点 ：W 32个(包括自动FOC) | X 64个
+G-Code,Flexible_configuration,Both 支持G-Code或灵活配置或两者都有 ：N 没有 | G G-code | F 灵活配置 | T 两者都有
+ServoBoost_number_of_axes_supported ServoBoost支持的轴号数(仅HP版本) ：N 不支持
+Input_shaping 支持Input_shaping ：Y 支持 | N 不支持
+I/O_configuration IO配置 ：N 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | D 输入和限位是24V/SOURCE(PNP),输出是24V/SOURCE(PNP) | S 输入和限位是24V/SINK(NPN),输出是24V/SOURCE(PNP) | U 输入是24V/SOURCE(PNP),限位是24V/SINK(NPN),输出是24V/SOURCE(PNP)
