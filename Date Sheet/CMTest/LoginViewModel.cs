@@ -82,7 +82,7 @@ namespace CMTest
             ModuleLists = new ObservableCollection<ModulesInfo>();
             PortLists = new ObservableCollection<PortInfo>();
             UpdateForm();
-            IsAutoDetectClip = true;
+            //IsAutoDetectClip = true;
             ReadModulesFunc();
         }
 
@@ -117,11 +117,11 @@ namespace CMTest
 
                         for (int i = 0; i < PortLists.Count; i++)
                         {
-                            resultString += $"{PortLists[i].SelectedEParaName} ";
+                            resultString += $"{PortLists[i].SelectedEParaName}";
                         }
                         ToolTipString = resultString;
-                        if (IsAutoDetectClip)
-                            DetectClipFunc(Clipboard.GetText(0).ToLower());
+                        //if (IsAutoDetectClip)
+                        //    DetectClipFunc(Clipboard.GetText(0).ToLower());
                     });
                 }
             });
