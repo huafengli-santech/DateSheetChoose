@@ -5,12 +5,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace CMTest
 {
@@ -421,6 +418,10 @@ namespace CMTest
                         MessageBox.Show($"数据源异常,请咨询工程师获取最新数据\n{e.Message}");
                     }
                 }
+                foreach (var item in PortLists)
+                {
+                    item.Index = 0;
+                }
             }
         }
 
@@ -468,6 +469,12 @@ namespace CMTest
                         MessageBox.Show($"数据源异常,请咨询工程师获取最新数据\n{e.Message}");
                     }
                 }
+
+
+            }
+            foreach (var item in PortLists)
+            {
+                item.Index = 0;
             }
         }
 
